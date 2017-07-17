@@ -12,10 +12,11 @@
 		FF4C33161F1D22760065E3CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4C33151F1D22760065E3CB /* Assets.xcassets */; };
 		FF4C33271F1D243D0065E3CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4C33221F1D243D0065E3CB /* LaunchScreen.storyboard */; };
 		FF4C33281F1D243D0065E3CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4C33231F1D243D0065E3CB /* Main.storyboard */; };
-		FF4C33291F1D243D0065E3CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF4C33241F1D243D0065E3CB /* GoogleService-Info.plist */; };
 		FF4C332B1F1D243D0065E3CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C33261F1D243D0065E3CB /* ViewController.swift */; };
 		FF4C33311F1D25DA0065E3CB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4C33301F1D25DA0065E3CB /* Login.storyboard */; };
 		FF4C33331F1D268E0065E3CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C33321F1D268E0065E3CB /* LoginViewController.swift */; };
+		FF4C33371F1D58DE0065E3CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF4C33361F1D58DE0065E3CB /* GoogleService-Info.plist */; };
+		FF4C333B1F1D59AB0065E3CB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF4C333A1F1D59AB0065E3CB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +28,11 @@
 		FF4C33151F1D22760065E3CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF4C33221F1D243D0065E3CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF4C33231F1D243D0065E3CB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
-		FF4C33241F1D243D0065E3CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FF4C33251F1D243D0065E3CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		FF4C33261F1D243D0065E3CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		FF4C33301F1D25DA0065E3CB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FF4C33321F1D268E0065E3CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FF4C33361F1D58DE0065E3CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF4C333A1F1D59AB0065E3CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +97,9 @@
 		FF4C332C1F1D24D30065E3CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF4C333A1F1D59AB0065E3CB /* Info.plist */,
 				FF4C33221F1D243D0065E3CB /* LaunchScreen.storyboard */,
-				FF4C33241F1D243D0065E3CB /* GoogleService-Info.plist */,
-				FF4C33251F1D243D0065E3CB /* Info.plist */,
+				FF4C33361F1D58DE0065E3CB /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,8 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4C33281F1D243D0065E3CB /* Main.storyboard in Resources */,
-				FF4C33291F1D243D0065E3CB /* GoogleService-Info.plist in Resources */,
 				FF4C33161F1D22760065E3CB /* Assets.xcassets in Resources */,
+				FF4C333B1F1D59AB0065E3CB /* Info.plist in Resources */,
+				FF4C33371F1D58DE0065E3CB /* GoogleService-Info.plist in Resources */,
 				FF4C33311F1D25DA0065E3CB /* Login.storyboard in Resources */,
 				FF4C33271F1D243D0065E3CB /* LaunchScreen.storyboard in Resources */,
 			);

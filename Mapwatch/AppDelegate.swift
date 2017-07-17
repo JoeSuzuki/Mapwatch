@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        let storyboard = UIStoryboard(name: "Login", bundle: .main)// directs storyboard to login screen
+        if let initalViewController = storyboard.instantiateInitialViewController() {
+            window?.rootViewController = initalViewController
+            window?.makeKeyAndVisible() // Position the window above any other existing windows
+        }
         return true
     }
 
