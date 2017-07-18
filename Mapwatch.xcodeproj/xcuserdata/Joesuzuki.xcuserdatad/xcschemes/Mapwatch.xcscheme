@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FF4C330A1F1D22760065E3CB"
+               BlueprintIdentifier = "FFFCB2BA1F1E5FB90097A62D"
                BuildableName = "Mapwatch.app"
                BlueprintName = "Mapwatch"
                ReferencedContainer = "container:Mapwatch.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FF4C330A1F1D22760065E3CB"
+            BlueprintIdentifier = "FFFCB2BA1F1E5FB90097A62D"
             BuildableName = "Mapwatch.app"
             BlueprintName = "Mapwatch"
             ReferencedContainer = "container:Mapwatch.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FF4C330A1F1D22760065E3CB"
+            BlueprintIdentifier = "FFFCB2BA1F1E5FB90097A62D"
             BuildableName = "Mapwatch.app"
             BlueprintName = "Mapwatch"
             ReferencedContainer = "container:Mapwatch.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FF4C330A1F1D22760065E3CB"
+            BlueprintIdentifier = "FFFCB2BA1F1E5FB90097A62D"
             BuildableName = "Mapwatch.app"
             BlueprintName = "Mapwatch"
             ReferencedContainer = "container:Mapwatch.xcodeproj">
