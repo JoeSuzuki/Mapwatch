@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		2A37F39AEFE5AB98B9C0A412 /* Pods_Mapwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4B7A6CEAE6C0D4AB1956F1 /* Pods_Mapwatch.framework */; };
 		FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */; };
-		FFFCB2C11F1E5FB90097A62D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2C01F1E5FB90097A62D /* ViewController.swift */; };
 		FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C21F1E5FB90097A62D /* Main.storyboard */; };
 		FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */; };
 		FFFCB2C91F1E5FB90097A62D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */; };
+		FFFCB2D21F1E634B0097A62D /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2D01F1E634B0097A62D /* MapView.storyboard */; };
+		FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2D31F1E63C30097A62D /* MapViewController.swift */; };
+		FFFCB2D81F1E640E0097A62D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */; };
+		FFFCB2DA1F1E660B0097A62D /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		CA3304751C525E67FFCE7AB5 /* Pods-Mapwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapwatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mapwatch/Pods-Mapwatch.release.xcconfig"; sourceTree = "<group>"; };
 		FFFCB2BB1F1E5FB90097A62D /* Mapwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFFCB2C01F1E5FB90097A62D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFFCB2C31F1E5FB90097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFFCB2C81F1E5FB90097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFFCB2CA1F1E5FB90097A62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFCB2D11F1E634B0097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MapView.storyboard; sourceTree = "<group>"; };
+		FFFCB2D31F1E63C30097A62D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFCB2D81F1E640E0097A62D /* CoreLocation.framework in Frameworks */,
 				2A37F39AEFE5AB98B9C0A412 /* Pods_Mapwatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +59,7 @@
 		6F805EE07D32CE86705B9591 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */,
 				0B4B7A6CEAE6C0D4AB1956F1 /* Pods_Mapwatch.framework */,
 			);
 			name = Frameworks;
@@ -79,8 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */,
-				FFFCB2C01F1E5FB90097A62D /* ViewController.swift */,
 				FFFCB2C21F1E5FB90097A62D /* Main.storyboard */,
+				FFFCB2D01F1E634B0097A62D /* MapView.storyboard */,
+				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
+				FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */,
 				FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */,
 				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
 				FFFCB2CA1F1E5FB90097A62D /* Info.plist */,
@@ -152,6 +162,7 @@
 			files = (
 				FFFCB2C91F1E5FB90097A62D /* LaunchScreen.storyboard in Resources */,
 				FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */,
+				FFFCB2D21F1E634B0097A62D /* MapView.storyboard in Resources */,
 				FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,8 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFFCB2C11F1E5FB90097A62D /* ViewController.swift in Sources */,
+				FFFCB2DA1F1E660B0097A62D /* PreferenceViewController.swift in Sources */,
 				FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */,
+				FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +245,14 @@
 				FFFCB2C81F1E5FB90097A62D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FFFCB2D01F1E634B0097A62D /* MapView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFFCB2D11F1E634B0097A62D /* Base */,
+			);
+			name = MapView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -376,6 +396,7 @@
 				FFFCB2CF1F1E5FB90097A62D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
