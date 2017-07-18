@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     
     // Map
     @IBOutlet weak var map: MKMapView!
@@ -39,14 +39,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest // accurate location
         manager.requestWhenInUseAuthorization() // when used
         manager.startUpdatingLocation()
-        
-        
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     

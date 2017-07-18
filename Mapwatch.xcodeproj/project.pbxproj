@@ -16,6 +16,8 @@
 		FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2D31F1E63C30097A62D /* MapViewController.swift */; };
 		FFFCB2D81F1E640E0097A62D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */; };
 		FFFCB2DA1F1E660B0097A62D /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */; };
+		FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2DB1F1E77250097A62D /* Preference.storyboard */; };
+		FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FFFCB2D31F1E63C30097A62D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		FFFCB2DC1F1E77250097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preference.storyboard; sourceTree = "<group>"; };
+		FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +92,11 @@
 			children = (
 				FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */,
 				FFFCB2C21F1E5FB90097A62D /* Main.storyboard */,
+				FFFCB2DB1F1E77250097A62D /* Preference.storyboard */,
+				FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */,
+				FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */,
 				FFFCB2D01F1E634B0097A62D /* MapView.storyboard */,
 				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
-				FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */,
 				FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */,
 				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
 				FFFCB2CA1F1E5FB90097A62D /* Info.plist */,
@@ -162,6 +168,7 @@
 			files = (
 				FFFCB2C91F1E5FB90097A62D /* LaunchScreen.storyboard in Resources */,
 				FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */,
+				FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */,
 				FFFCB2D21F1E634B0097A62D /* MapView.storyboard in Resources */,
 				FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */,
 			);
@@ -224,6 +231,7 @@
 			files = (
 				FFFCB2DA1F1E660B0097A62D /* PreferenceViewController.swift in Sources */,
 				FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */,
+				FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */,
 				FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +261,14 @@
 				FFFCB2D11F1E634B0097A62D /* Base */,
 			);
 			name = MapView.storyboard;
+			sourceTree = "<group>";
+		};
+		FFFCB2DB1F1E77250097A62D /* Preference.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFFCB2DC1F1E77250097A62D /* Base */,
+			);
+			name = Preference.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
