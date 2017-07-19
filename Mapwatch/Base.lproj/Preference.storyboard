@@ -22,7 +22,7 @@
                         <outlet property="searchResultsDelegate" destination="Y0Y-Fg-N83" id="YoS-qq-Z07"/>
                     </connections>
                 </searchDisplayController>
-                <viewController id="Y0Y-Fg-N83" sceneMemberID="viewController">
+                <viewController id="Y0Y-Fg-N83" customClass="PreferenceViewController" customModule="Mapwatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JhT-AY-VGc"/>
                         <viewControllerLayoutGuide type="bottom" id="KGn-D0-HVo"/>
@@ -128,6 +128,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButton:" destination="TbP-Na-UvC" eventType="touchUpInside" id="ybW-eE-JO2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32049418880000002" green="0.87535190039999999" blue="0.48080930579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,6 +152,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W9o-M8-2f4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ia1-uE-6IQ">
+                            <connections>
+                                <segue destination="Y0Y-Fg-N83" kind="show" id="NhR-so-ccC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="WEw-1N-OkJ">
                             <connections>
                                 <action selector="searchButton:" destination="TbP-Na-UvC" id="3Us-Qf-GUD"/>
@@ -162,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMl-UR-gbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="-887"/>
+            <point key="canvasLocation" x="1090" y="-1033"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="PEJ-RD-onl">
@@ -185,4 +193,7 @@
             <point key="canvasLocation" x="-676" y="-887"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NhR-so-ccC"/>
+    </inferredMetricsTieBreakers>
 </document>
