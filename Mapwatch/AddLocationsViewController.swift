@@ -12,7 +12,10 @@ import MapKit
 import CoreLocation
 
 class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate,UISearchBarDelegate {
-    
+    var businessess: [Business?] = []
+    var locationManager = CLLocationManager()
+    var searchController: UISearchController!
+    var searchText: String = ""
     // Map
     @IBAction func searchButton(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -77,6 +80,17 @@ class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocation
             
         }
     }
+    func loadBusinesses() {
+        let _ = YelpClient.sharedInstance.searchWithTerm("", offset: nil, latitude: locationManager.location?.coordinate.latitude, longitude: locationManager.location?.coordinate.longitude, sort: .distance, categories: nil, deals: nil) { (businessess, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.businessess = businessess!
+            }
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +98,6 @@ class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocation
     @IBAction func addButton(_ sender: UIButton) {
         //button pressed, want to send to firebase to table view
     }
-    
-    
 }
+
+            

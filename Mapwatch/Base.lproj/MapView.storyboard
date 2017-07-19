@@ -9,10 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Current Location-->
         <scene sceneID="TuW-CP-iA5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IRY-Vm-EwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="SOP-Pq-PBn" customClass="MapViewController" customModule="Mapwatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r40-Cg-Dzv"/>
@@ -37,11 +36,12 @@
                             <constraint firstAttribute="trailing" secondItem="JzM-be-jDy" secondAttribute="trailing" id="TW2-si-mth"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hM8-lF-9GY"/>
+                    <navigationItem key="navigationItem" title="Current Location" id="hM8-lF-9GY"/>
                     <connections>
                         <outlet property="map" destination="JzM-be-jDy" id="7U1-0U-rqV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRY-Vm-EwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="501.60000000000002" y="-0.44977511244377816"/>
         </scene>
