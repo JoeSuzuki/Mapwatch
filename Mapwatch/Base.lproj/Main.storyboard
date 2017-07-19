@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnd-fx-myp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="-177"/>
+            <point key="canvasLocation" x="-468" y="-134"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lai-ii-ThU">

@@ -18,6 +18,8 @@
 		FFFCB2DA1F1E660B0097A62D /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */; };
 		FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2DB1F1E77250097A62D /* Preference.storyboard */; };
 		FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */; };
+		FFFCB2E11F1F099E0097A62D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2E01F1F099E0097A62D /* Login.storyboard */; };
+		FFFCB2E31F1F09B20097A62D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2E21F1F09B20097A62D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FFFCB2D91F1E660B0097A62D /* PreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		FFFCB2DC1F1E77250097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preference.storyboard; sourceTree = "<group>"; };
 		FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationsViewController.swift; sourceTree = "<group>"; };
+		FFFCB2E01F1F099E0097A62D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FFFCB2E21F1F09B20097A62D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
 				FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */,
 				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
+				FFFCB2E21F1F09B20097A62D /* LoginViewController.swift */,
+				FFFCB2E01F1F099E0097A62D /* Login.storyboard */,
 				FFFCB2CA1F1E5FB90097A62D /* Info.plist */,
 			);
 			path = Mapwatch;
@@ -168,6 +174,7 @@
 			files = (
 				FFFCB2C91F1E5FB90097A62D /* LaunchScreen.storyboard in Resources */,
 				FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */,
+				FFFCB2E11F1F099E0097A62D /* Login.storyboard in Resources */,
 				FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */,
 				FFFCB2D21F1E634B0097A62D /* MapView.storyboard in Resources */,
 				FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */,
@@ -232,6 +239,7 @@
 				FFFCB2DA1F1E660B0097A62D /* PreferenceViewController.swift in Sources */,
 				FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */,
 				FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */,
+				FFFCB2E31F1F09B20097A62D /* LoginViewController.swift in Sources */,
 				FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
