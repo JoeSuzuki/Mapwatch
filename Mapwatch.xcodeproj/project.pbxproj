@@ -17,18 +17,21 @@
 		FFFCB2D81F1E640E0097A62D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */; };
 		FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2DB1F1E77250097A62D /* Preference.storyboard */; };
 		FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */; };
-		FFFCB2E11F1F099E0097A62D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2E01F1F099E0097A62D /* Login.storyboard */; };
 		FFFCB2EB1F1FA2480097A62D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2EA1F1FA2480097A62D /* GoogleService-Info.plist */; };
-		FFFCB2ED1F1FA3600097A62D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2EC1F1FA3600097A62D /* LoginViewController.swift */; };
-		FFFCB2EF1F1FA5C30097A62D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2EE1F1FA5C30097A62D /* MainViewController.swift */; };
-		FFFCB2F11F1FA7690097A62D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2F01F1FA7690097A62D /* User.swift */; };
-		FFFCB2F31F1FA7C70097A62D /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2F21F1FA7C70097A62D /* CreateUsernameViewController.swift */; };
-		FFFCB2F51F1FA9E60097A62D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2F41F1FA9E60097A62D /* UserService.swift */; };
 		FFFCB2F81F1FAE180097A62D /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2F71F1FAE180097A62D /* YelpClient.swift */; };
 		FFFCB3161F1FB14E0097A62D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3141F1FB14E0097A62D /* Business.swift */; };
 		FFFCB3171F1FB14E0097A62D /* BusinesssAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3151F1FB14E0097A62D /* BusinesssAnnotation.swift */; };
 		FFFCB3251F1FE0DE0097A62D /* RestrictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */; };
 		FFFCB3271F1FE1250097A62D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3261F1FE1250097A62D /* TableViewController.swift */; };
+		FFFCB32C1F1FF5040097A62D /* TableOfRestrictedFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB32A1F1FF5040097A62D /* TableOfRestrictedFood.storyboard */; };
+		FFFCB35C1F2024880097A62D /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3351F2024880097A62D /* CreateUsernameViewController.swift */; };
+		FFFCB35D1F2024880097A62D /*  DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3371F2024880097A62D /*  DatabaseReference+Location.swift */; };
+		FFFCB35E1F2024880097A62D /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3381F2024880097A62D /* Storyboard+Utility.swift */; };
+		FFFCB3651F2024880097A62D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3401F2024880097A62D /* LoginViewController.swift */; };
+		FFFCB3681F2024880097A62D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3441F2024880097A62D /* User.swift */; };
+		FFFCB36E1F2024880097A62D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB34B1F2024880097A62D /* UserService.swift */; };
+		FFFCB3721F2024880097A62D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB3501F2024880097A62D /* Login.storyboard */; };
+		FFFCB37A1F2025DF0097A62D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3791F2025DF0097A62D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,18 +49,21 @@
 		FFFCB2D71F1E640E0097A62D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FFFCB2DC1F1E77250097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preference.storyboard; sourceTree = "<group>"; };
 		FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationsViewController.swift; sourceTree = "<group>"; };
-		FFFCB2E01F1F099E0097A62D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FFFCB2EA1F1FA2480097A62D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FFFCB2EC1F1FA3600097A62D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FFFCB2EE1F1FA5C30097A62D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		FFFCB2F01F1FA7690097A62D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FFFCB2F21F1FA7C70097A62D /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
-		FFFCB2F41F1FA9E60097A62D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FFFCB2F71F1FAE180097A62D /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		FFFCB3141F1FB14E0097A62D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		FFFCB3151F1FB14E0097A62D /* BusinesssAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinesssAnnotation.swift; sourceTree = "<group>"; };
 		FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestrictionViewController.swift; sourceTree = "<group>"; };
 		FFFCB3261F1FE1250097A62D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FFFCB32B1F1FF5040097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TableOfRestrictedFood.storyboard; sourceTree = "<group>"; };
+		FFFCB3351F2024880097A62D /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateUsernameViewController.swift; path = Makestagram/CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		FFFCB3371F2024880097A62D /*  DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = " DatabaseReference+Location.swift"; path = "Makestagram/Extensions/ DatabaseReference+Location.swift"; sourceTree = "<group>"; };
+		FFFCB3381F2024880097A62D /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Makestagram/Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		FFFCB3401F2024880097A62D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Makestagram/LoginViewController.swift; sourceTree = "<group>"; };
+		FFFCB3441F2024880097A62D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Makestagram/Models/User.swift; sourceTree = "<group>"; };
+		FFFCB34B1F2024880097A62D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Makestagram/Services/UserService.swift; sourceTree = "<group>"; };
+		FFFCB3501F2024880097A62D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Makestagram/Storyboards/Login.storyboard; sourceTree = "<group>"; };
+		FFFCB3791F2025DF0097A62D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,36 +119,63 @@
 			isa = PBXGroup;
 			children = (
 				FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */,
-				FFFCB2C21F1E5FB90097A62D /* Main.storyboard */,
-				FFFCB2DB1F1E77250097A62D /* Preference.storyboard */,
-				FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */,
-				FFFCB3261F1FE1250097A62D /* TableViewController.swift */,
-				FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */,
-				FFFCB2F71F1FAE180097A62D /* YelpClient.swift */,
-				FFFCB3141F1FB14E0097A62D /* Business.swift */,
-				FFFCB3151F1FB14E0097A62D /* BusinesssAnnotation.swift */,
-				FFFCB2EE1F1FA5C30097A62D /* MainViewController.swift */,
-				FFFCB2D01F1E634B0097A62D /* MapView.storyboard */,
-				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
+				FFFCB32F1F201FAE0097A62D /* ViewController */,
+				FFFCB32E1F201F9C0097A62D /* Storyboard */,
+				FFFCB32D1F201F6E0097A62D /* Yelp */,
 				FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */,
 				FFFCB2CA1F1E5FB90097A62D /* Info.plist */,
-				FFFCB2F61F1FADFD0097A62D /* Useless firebase */,
+				FFFCB37B1F2027540097A62D /* Firebase bs */,
+				FFFCB2EA1F1FA2480097A62D /* GoogleService-Info.plist */,
+				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
 			);
 			path = Mapwatch;
 			sourceTree = "<group>";
 		};
-		FFFCB2F61F1FADFD0097A62D /* Useless firebase */ = {
+		FFFCB32D1F201F6E0097A62D /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
-				FFFCB2F41F1FA9E60097A62D /* UserService.swift */,
-				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
-				FFFCB2EA1F1FA2480097A62D /* GoogleService-Info.plist */,
-				FFFCB2F01F1FA7690097A62D /* User.swift */,
-				FFFCB2F21F1FA7C70097A62D /* CreateUsernameViewController.swift */,
-				FFFCB2E01F1F099E0097A62D /* Login.storyboard */,
-				FFFCB2EC1F1FA3600097A62D /* LoginViewController.swift */,
+				FFFCB2F71F1FAE180097A62D /* YelpClient.swift */,
+				FFFCB3141F1FB14E0097A62D /* Business.swift */,
+				FFFCB3151F1FB14E0097A62D /* BusinesssAnnotation.swift */,
 			);
-			name = "Useless firebase";
+			name = Yelp;
+			sourceTree = "<group>";
+		};
+		FFFCB32E1F201F9C0097A62D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCB2C21F1E5FB90097A62D /* Main.storyboard */,
+				FFFCB32A1F1FF5040097A62D /* TableOfRestrictedFood.storyboard */,
+				FFFCB2DB1F1E77250097A62D /* Preference.storyboard */,
+				FFFCB2D01F1E634B0097A62D /* MapView.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		FFFCB32F1F201FAE0097A62D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */,
+				FFFCB3261F1FE1250097A62D /* TableViewController.swift */,
+				FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */,
+				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		FFFCB37B1F2027540097A62D /* Firebase bs */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCB3791F2025DF0097A62D /* Constants.swift */,
+				FFFCB3351F2024880097A62D /* CreateUsernameViewController.swift */,
+				FFFCB3371F2024880097A62D /*  DatabaseReference+Location.swift */,
+				FFFCB3381F2024880097A62D /* Storyboard+Utility.swift */,
+				FFFCB3441F2024880097A62D /* User.swift */,
+				FFFCB3401F2024880097A62D /* LoginViewController.swift */,
+				FFFCB34B1F2024880097A62D /* UserService.swift */,
+				FFFCB3501F2024880097A62D /* Login.storyboard */,
+			);
+			name = "Firebase bs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,11 +243,12 @@
 			files = (
 				FFFCB2C91F1E5FB90097A62D /* LaunchScreen.storyboard in Resources */,
 				FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */,
-				FFFCB2E11F1F099E0097A62D /* Login.storyboard in Resources */,
+				FFFCB32C1F1FF5040097A62D /* TableOfRestrictedFood.storyboard in Resources */,
 				FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */,
 				FFFCB2D21F1E634B0097A62D /* MapView.storyboard in Resources */,
 				FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */,
 				FFFCB2EB1F1FA2480097A62D /* GoogleService-Info.plist in Resources */,
+				FFFCB3721F2024880097A62D /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,18 +308,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFFCB2F81F1FAE180097A62D /* YelpClient.swift in Sources */,
-				FFFCB2F31F1FA7C70097A62D /* CreateUsernameViewController.swift in Sources */,
 				FFFCB3271F1FE1250097A62D /* TableViewController.swift in Sources */,
+				FFFCB3681F2024880097A62D /* User.swift in Sources */,
 				FFFCB3171F1FB14E0097A62D /* BusinesssAnnotation.swift in Sources */,
-				FFFCB2F51F1FA9E60097A62D /* UserService.swift in Sources */,
 				FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */,
+				FFFCB37A1F2025DF0097A62D /* Constants.swift in Sources */,
 				FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */,
-				FFFCB2EF1F1FA5C30097A62D /* MainViewController.swift in Sources */,
-				FFFCB2ED1F1FA3600097A62D /* LoginViewController.swift in Sources */,
+				FFFCB3651F2024880097A62D /* LoginViewController.swift in Sources */,
+				FFFCB36E1F2024880097A62D /* UserService.swift in Sources */,
+				FFFCB35E1F2024880097A62D /* Storyboard+Utility.swift in Sources */,
+				FFFCB35C1F2024880097A62D /* CreateUsernameViewController.swift in Sources */,
 				FFFCB3161F1FB14E0097A62D /* Business.swift in Sources */,
 				FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */,
+				FFFCB35D1F2024880097A62D /*  DatabaseReference+Location.swift in Sources */,
 				FFFCB3251F1FE0DE0097A62D /* RestrictionViewController.swift in Sources */,
-				FFFCB2F11F1FA7690097A62D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +358,14 @@
 				FFFCB2DC1F1E77250097A62D /* Base */,
 			);
 			name = Preference.storyboard;
+			sourceTree = "<group>";
+		};
+		FFFCB32A1F1FF5040097A62D /* TableOfRestrictedFood.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFFCB32B1F1FF5040097A62D /* Base */,
+			);
+			name = TableOfRestrictedFood.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

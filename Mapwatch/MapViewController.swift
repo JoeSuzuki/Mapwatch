@@ -14,6 +14,7 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
     
     // Map
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var adressLabel: UILabel!
     
     let manager = CLLocationManager()
     
@@ -27,10 +28,25 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
         self.map.showsUserLocation = true
         print("coordinate")
         print(location.coordinate)
-        print("speed")
-        print(location.speed)
 
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+            if error != nil
+            {
+                print ("you messed up")
+            }
+            else
+            {
+                if let place = placemark?[0]
+                {
+                    if let checker = place.subThoroughfare
+                    {
+                        self.adressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!)"
+                    }
+                }
+            }
+        }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        
         // Override point for customization after application launch.
+        // this line is important
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // In project directory storyboard looks like Main.storyboard,
+        // you should use only part before ".storyboard" as it's name,
+        // so in this example name is "Main".
+        let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
+        
+        // controller identifier sets up in storyboard utilities
+        // panel (on the right), it called Storyboard ID
+        let viewController = storyboard.instantiateViewController(withIdentifier: "Logins") as! LoginViewController
+        
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
@@ -43,4 +59,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+extension AppDelegate { // keeps them logged in
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            
+            User.setCurrent(user)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
+}
+
+
 

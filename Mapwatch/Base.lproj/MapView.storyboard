@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,22 +23,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-be-jDy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="461"/>
                                 <connections>
                                     <outlet property="delegate" destination="SOP-Pq-PBn" id="bcw-i3-Vu7"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUG-Qe-WNC">
+                                <rect key="frame" x="0.0" y="533" width="375" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="4Bc-1Z-pJZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32049418880000002" green="0.87535190039999999" blue="0.48080930579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JzM-be-jDy" firstAttribute="top" secondItem="r40-Cg-Dzv" secondAttribute="bottom" id="1kH-zn-NQQ"/>
-                            <constraint firstItem="JzM-be-jDy" firstAttribute="leading" secondItem="xFv-C0-b9U" secondAttribute="leading" id="CSd-Ug-lgk"/>
-                            <constraint firstItem="JzM-be-jDy" firstAttribute="bottom" secondItem="1lJ-k5-1N4" secondAttribute="top" id="DR9-r4-y23"/>
-                            <constraint firstAttribute="trailing" secondItem="JzM-be-jDy" secondAttribute="trailing" id="TW2-si-mth"/>
+                            <constraint firstItem="JzM-be-jDy" firstAttribute="leading" secondItem="xFv-C0-b9U" secondAttribute="leading" id="762-0J-2F9"/>
+                            <constraint firstAttribute="trailing" secondItem="JzM-be-jDy" secondAttribute="trailing" id="LST-z0-rgC"/>
+                            <constraint firstItem="YUG-Qe-WNC" firstAttribute="top" secondItem="JzM-be-jDy" secondAttribute="bottom" constant="8" symbolic="YES" id="f7d-pc-UUV"/>
+                            <constraint firstItem="JzM-be-jDy" firstAttribute="top" secondItem="r40-Cg-Dzv" secondAttribute="bottom" id="gCr-Gh-ibk"/>
+                            <constraint firstItem="YUG-Qe-WNC" firstAttribute="leading" secondItem="xFv-C0-b9U" secondAttribute="leadingMargin" constant="-16" id="p6o-R9-UJx"/>
+                            <constraint firstItem="1lJ-k5-1N4" firstAttribute="top" secondItem="YUG-Qe-WNC" secondAttribute="bottom" constant="8" symbolic="YES" id="qVB-ID-BQK"/>
+                            <constraint firstItem="JzM-be-jDy" firstAttribute="centerX" secondItem="YUG-Qe-WNC" secondAttribute="centerX" id="sqx-ba-QAk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Current Location" id="hM8-lF-9GY"/>
                     <connections>
+                        <outlet property="adressLabel" destination="YUG-Qe-WNC" id="Vnd-Un-leG"/>
                         <outlet property="map" destination="JzM-be-jDy" id="7U1-0U-rqV"/>
                     </connections>
                 </viewController>

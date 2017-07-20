@@ -16,11 +16,14 @@ class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocation
     var locationManager = CLLocationManager()
     var searchController: UISearchController!
     var searchText: String = ""
+
     // Map
     @IBAction func searchButton(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         present(searchController, animated: true, completion: nil)
+        searchController.searchBar.placeholder = "e.g. tacos, fries, Max's"
+
     }
     
     @IBOutlet weak var map: MKMapView!
@@ -79,17 +82,6 @@ class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocation
             }
             
         }
-    }
-    func loadBusinesses() {
-        let _ = YelpClient.sharedInstance.searchWithTerm("", offset: nil, latitude: locationManager.location?.coordinate.latitude, longitude: locationManager.location?.coordinate.longitude, sort: .distance, categories: nil, deals: nil) { (businessess, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                self.businessess = businessess!
-            }
-            
-        }
-        
     }
     
     override func viewDidLoad() {
