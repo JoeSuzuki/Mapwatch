@@ -15,5 +15,5 @@ target 'Mapwatch' do
   pod 'AFNetworking', '~> 2.5'
   pod 'BDBOAuth1Manager', '~> 1.6.0'
   pod 'SDWebImage'
-
+pod 'STLocationRequest'
 end

@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Font-Awesome-Swift-Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,14 +49,19 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>STLocationRequest-STLocationRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>STLocationRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E0F37DF599A200D6C01DEA5ECEAA8E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -57,12 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>22A71F8C5E73934BC751F7EAAB190212</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3380590F973AFAFA30255D504B7DEDAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69CF8A1F9B72C963D91A011EC2EDBBAC</key>
+		<key>43B0303F4CCEAA405FCA9942FC484D37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +92,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>82DCE869B9C06EC825B159A24BD507DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9735AA72928D41DB06EA697E23930C72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA453546C51032641C49CACBC22725EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E376FC64D4AF116EC9D5FC004659F11B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

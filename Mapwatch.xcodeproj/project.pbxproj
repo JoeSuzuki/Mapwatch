@@ -32,6 +32,14 @@
 		FFFCB36E1F2024880097A62D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB34B1F2024880097A62D /* UserService.swift */; };
 		FFFCB3721F2024880097A62D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB3501F2024880097A62D /* Login.storyboard */; };
 		FFFCB37A1F2025DF0097A62D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3791F2025DF0097A62D /* Constants.swift */; };
+		FFFCB37D1F20E5090097A62D /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB37C1F20E5090097A62D /* UITableView+Utility.swift */; };
+		FFFCB3811F20F3320097A62D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3801F20F3320097A62D /* ViewController.swift */; };
+		FFFCB3831F20F7BB0097A62D /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3821F20F7BB0097A62D /* BusinessesViewController.swift */; };
+		FFFCB3851F20FD340097A62D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3841F20FD330097A62D /* Post.swift */; };
+		FFFCB3871F20FE270097A62D /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3861F20FE270097A62D /* PostService.swift */; };
+		FFFCB3891F2101CA0097A62D /*  StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB3881F2101CA0097A62D /*  StorageReference+Post.swift */; };
+		FFFCB38D1F2102210097A62D /* MGPaginationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB38B1F2102210097A62D /* MGPaginationHelper.swift */; };
+		FFFCB38E1F2102210097A62D /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB38C1F2102210097A62D /* MGPhotoHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +72,14 @@
 		FFFCB34B1F2024880097A62D /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Makestagram/Services/UserService.swift; sourceTree = "<group>"; };
 		FFFCB3501F2024880097A62D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Makestagram/Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		FFFCB3791F2025DF0097A62D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FFFCB37C1F20E5090097A62D /* UITableView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utility.swift"; sourceTree = "<group>"; };
+		FFFCB3801F20F3320097A62D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFFCB3821F20F7BB0097A62D /* BusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
+		FFFCB3841F20FD330097A62D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FFFCB3861F20FE270097A62D /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		FFFCB3881F2101CA0097A62D /*  StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " StorageReference+Post.swift"; sourceTree = "<group>"; };
+		FFFCB38B1F2102210097A62D /* MGPaginationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPaginationHelper.swift; sourceTree = "<group>"; };
+		FFFCB38C1F2102210097A62D /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPhotoHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +150,7 @@
 		FFFCB32D1F201F6E0097A62D /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
+				FFFCB3821F20F7BB0097A62D /* BusinessesViewController.swift */,
 				FFFCB2F71F1FAE180097A62D /* YelpClient.swift */,
 				FFFCB3141F1FB14E0097A62D /* Business.swift */,
 				FFFCB3151F1FB14E0097A62D /* BusinesssAnnotation.swift */,
@@ -159,6 +176,7 @@
 				FFFCB3261F1FE1250097A62D /* TableViewController.swift */,
 				FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */,
 				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
+				FFFCB3801F20F3320097A62D /* ViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -166,16 +184,30 @@
 		FFFCB37B1F2027540097A62D /* Firebase bs */ = {
 			isa = PBXGroup;
 			children = (
-				FFFCB3791F2025DF0097A62D /* Constants.swift */,
 				FFFCB3351F2024880097A62D /* CreateUsernameViewController.swift */,
 				FFFCB3371F2024880097A62D /*  DatabaseReference+Location.swift */,
+				FFFCB3861F20FE270097A62D /* PostService.swift */,
+				FFFCB3791F2025DF0097A62D /* Constants.swift */,
+				FFFCB3841F20FD330097A62D /* Post.swift */,
 				FFFCB3381F2024880097A62D /* Storyboard+Utility.swift */,
+				FFFCB37C1F20E5090097A62D /* UITableView+Utility.swift */,
 				FFFCB3441F2024880097A62D /* User.swift */,
 				FFFCB3401F2024880097A62D /* LoginViewController.swift */,
+				FFFCB3881F2101CA0097A62D /*  StorageReference+Post.swift */,
 				FFFCB34B1F2024880097A62D /* UserService.swift */,
 				FFFCB3501F2024880097A62D /* Login.storyboard */,
+				FFFCB38A1F2102210097A62D /* Helpers */,
 			);
 			name = "Firebase bs";
+			sourceTree = "<group>";
+		};
+		FFFCB38A1F2102210097A62D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCB38B1F2102210097A62D /* MGPaginationHelper.swift */,
+				FFFCB38C1F2102210097A62D /* MGPhotoHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,17 +342,25 @@
 				FFFCB2F81F1FAE180097A62D /* YelpClient.swift in Sources */,
 				FFFCB3271F1FE1250097A62D /* TableViewController.swift in Sources */,
 				FFFCB3681F2024880097A62D /* User.swift in Sources */,
+				FFFCB38E1F2102210097A62D /* MGPhotoHelper.swift in Sources */,
 				FFFCB3171F1FB14E0097A62D /* BusinesssAnnotation.swift in Sources */,
+				FFFCB37D1F20E5090097A62D /* UITableView+Utility.swift in Sources */,
 				FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */,
 				FFFCB37A1F2025DF0097A62D /* Constants.swift in Sources */,
 				FFFCB2DF1F1E91F50097A62D /* AddLocationsViewController.swift in Sources */,
+				FFFCB3831F20F7BB0097A62D /* BusinessesViewController.swift in Sources */,
 				FFFCB3651F2024880097A62D /* LoginViewController.swift in Sources */,
+				FFFCB3811F20F3320097A62D /* ViewController.swift in Sources */,
 				FFFCB36E1F2024880097A62D /* UserService.swift in Sources */,
 				FFFCB35E1F2024880097A62D /* Storyboard+Utility.swift in Sources */,
 				FFFCB35C1F2024880097A62D /* CreateUsernameViewController.swift in Sources */,
 				FFFCB3161F1FB14E0097A62D /* Business.swift in Sources */,
+				FFFCB3871F20FE270097A62D /* PostService.swift in Sources */,
 				FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */,
+				FFFCB38D1F2102210097A62D /* MGPaginationHelper.swift in Sources */,
+				FFFCB3851F20FD340097A62D /* Post.swift in Sources */,
 				FFFCB35D1F2024880097A62D /*  DatabaseReference+Location.swift in Sources */,
+				FFFCB3891F2101CA0097A62D /*  StorageReference+Post.swift in Sources */,
 				FFFCB3251F1FE0DE0097A62D /* RestrictionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

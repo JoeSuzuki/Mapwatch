@@ -70,6 +70,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Adn-cn-5JI"/>
+                    <connections>
+                        <outlet property="searchBar" destination="8Ii-6T-wTb" id="pDf-0J-SI8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZi-g0-3OP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +149,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="u6P-O0-deR"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Li7-1D-wzk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Li7-1D-wzk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

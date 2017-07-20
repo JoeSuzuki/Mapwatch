@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     var list = ["Milk", "Honey", "Bread", "Tacos", "Tomatoes"]
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
