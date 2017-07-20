@@ -11,7 +11,7 @@ import FirebaseStorage
 import FirebaseDatabase
 
 struct PostService {
-    private static func create(forURLString name: String, address: String) {
+    private static func create(_ name: String, address: String) {
         // create new post in database
         // 1 Create a reference to the current user. We'll need the user's UID to construct the location of where we'll store our post data in our database.
         let currentUser = User.current

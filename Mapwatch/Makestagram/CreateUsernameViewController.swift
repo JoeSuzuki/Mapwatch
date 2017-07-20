@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Firebase
 
-class CreateUsernameViewController: UIViewController {
+class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
    
 
     @IBOutlet weak var usernameTextField: UITextField!
@@ -26,6 +26,12 @@ class CreateUsernameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true;
+    }
+    
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         // create user account here
         // 1 First we guard to check that a FIRUser is logged in
@@ -46,6 +52,15 @@ class CreateUsernameViewController: UIViewController {
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
         }
+        self.usernameTextField.delegate = self
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return (true)
+    }
+    
 }
  

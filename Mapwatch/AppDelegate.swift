@@ -15,9 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
-        
-        configureInitialRootViewController(for: window)
 
         // Override point for customization after application launch.
         // this line is important
@@ -34,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
+        FirebaseApp.configure()
+        
+        configureInitialRootViewController(for: window)
         return true
     }
 

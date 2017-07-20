@@ -12,45 +12,45 @@ import CoreLocation
 import Firebase
 
 class RestrictionViewController: UIViewController {
+    func CreateRes(_ address: String){
+    var ref: DatabaseReference!
+    ref = Database.database().reference()
+        self.ref?.child("users").child("Restruants").setValue(["Locations": address])
+    }
+
     var posts = [Post]()
-    let refreshControl = UIRefreshControl()
      var businesses: [Business]!
     var ref:DatabaseReference?
-
-    
+    var search: String?
     
     @IBOutlet weak var searchBar: UITextField!
-    @IBAction func textBar(_ sender: UITextField) {
-        }
     
     @IBAction func addButton(_ sender: UIButton) {
-        if searchBar.text != "" {
-            Business.searchWithTerm(term: searchBar.text!, completion: { (businesses: [Business]?, error: Error?) -> Void in
-                self.businesses = businesses
-                if let businesses = businesses {
-                    for business in businesses {
-                       // print(business.name!)
-                        //print(business.address!)
-                    }
+        guard let search = searchBar.text else {
+            return
+        }
+        Business.searchWithTerm(term: search, completion: { (businesses: [Business]?, error: Error?) -> Void in
+            self.businesses = businesses
+            if let businesses = businesses {
+                for business in businesses {
+                    self.CreateRes(business.address!)
                 }
             }
-            )}}
+        }
+        )
+        
+    }
+
+
 override func viewDidLoad() {
         ref = Database.database().reference()
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-        
-    
-        }}
+       // ref?.child("users").child(User.uid).child("Restraunts").setValue("")
 
-}
+    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+    }}
+
+
 
 
 

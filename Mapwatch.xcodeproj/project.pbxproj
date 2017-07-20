@@ -136,13 +136,12 @@
 			children = (
 				FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */,
 				FFFCB32F1F201FAE0097A62D /* ViewController */,
+				FFFCB37B1F2027540097A62D /* Firebase bs */,
 				FFFCB32E1F201F9C0097A62D /* Storyboard */,
 				FFFCB32D1F201F6E0097A62D /* Yelp */,
 				FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */,
 				FFFCB2CA1F1E5FB90097A62D /* Info.plist */,
-				FFFCB37B1F2027540097A62D /* Firebase bs */,
 				FFFCB2EA1F1FA2480097A62D /* GoogleService-Info.plist */,
-				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
 			);
 			path = Mapwatch;
 			sourceTree = "<group>";
@@ -165,6 +164,7 @@
 				FFFCB32A1F1FF5040097A62D /* TableOfRestrictedFood.storyboard */,
 				FFFCB2DB1F1E77250097A62D /* Preference.storyboard */,
 				FFFCB2D01F1E634B0097A62D /* MapView.storyboard */,
+				FFFCB2C71F1E5FB90097A62D /* LaunchScreen.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -172,11 +172,11 @@
 		FFFCB32F1F201FAE0097A62D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */,
 				FFFCB3261F1FE1250097A62D /* TableViewController.swift */,
 				FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */,
 				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
 				FFFCB3801F20F3320097A62D /* ViewController.swift */,
+				FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -184,6 +184,7 @@
 		FFFCB37B1F2027540097A62D /* Firebase bs */ = {
 			isa = PBXGroup;
 			children = (
+				FFFCB34B1F2024880097A62D /* UserService.swift */,
 				FFFCB3351F2024880097A62D /* CreateUsernameViewController.swift */,
 				FFFCB3371F2024880097A62D /*  DatabaseReference+Location.swift */,
 				FFFCB3861F20FE270097A62D /* PostService.swift */,
@@ -194,7 +195,6 @@
 				FFFCB3441F2024880097A62D /* User.swift */,
 				FFFCB3401F2024880097A62D /* LoginViewController.swift */,
 				FFFCB3881F2101CA0097A62D /*  StorageReference+Post.swift */,
-				FFFCB34B1F2024880097A62D /* UserService.swift */,
 				FFFCB3501F2024880097A62D /* Login.storyboard */,
 				FFFCB38A1F2102210097A62D /* Helpers */,
 			);

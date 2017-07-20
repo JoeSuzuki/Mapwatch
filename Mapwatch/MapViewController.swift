@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import STLocationRequest
-
+import Firebase
 class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     func presentLocationRequestController(){
