@@ -11,6 +11,10 @@ import MapKit
 import CoreLocation
 import STLocationRequest
 import Firebase
+import AudioToolbox
+import SwiftySound
+import AVFoundation
+
 class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     func presentLocationRequestController(){
@@ -29,13 +33,14 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
         return true;
     }
     
-    
+
     // Map
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var adressLabel: UILabel!
     
     let manager = CLLocationManager()
-    
+    var player:AVAudioPlayer = AVAudioPlayer()
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
@@ -48,36 +53,72 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
         print(location.coordinate)
 
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
-            if error != nil
-            {
+            if error != nil{
                 print ("You messed up")
             }
-            else
-            {
-                if let place = placemark?[0]
-                {
-                    if let checker = place.subThoroughfare
-                    {
-                        self.adressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!)"
+            else{
+                if let place = placemark?[0]{
+                    if let checker = place.subThoroughfare{
+                        self.adressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!) "
+                        let radius: Double = 0.1 // miles
+                        let userLocation = place.location
+                        let venueLocation = CLLocation(latitude: 90.718413401049972, longitude: -104.002380746143388)
+                        
+                        let distanceInMeters = userLocation?.distance(from: venueLocation)
+                        let distanceInMiles = distanceInMeters! * 0.00062137
+                        
+                        if distanceInMiles < radius {
+            
+                        }
                     }
                 }
             }
         }
     }
-
+    func warn(_ location: CLLocationManager, _ restricted:  [CLLocation] ){
+        for x in restricted {
+            if location == x {
+                print("it works")
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.locationManager.delegate = self
+        manager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.distanceFilter = kCLDistanceFilterNone
         self.locationManager.startUpdatingLocation()
         manager.desiredAccuracy = kCLLocationAccuracyBest // accurate location
         manager.requestWhenInUseAuthorization() // when used
         manager.startUpdatingLocation()
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "hyena-laugh_daniel-simion", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }
+        catch
+        {
+            //PROCESS ERROR
+        }
+        
+        let session = AVAudioSession.sharedInstance()
+        
+        do
+        {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch
+        {
+            
+        }
+        
+        player.play()
     }
-    
-}
+
+    }
+
 
 extension MapViewController: STLocationRequestControllerDelegate {
     

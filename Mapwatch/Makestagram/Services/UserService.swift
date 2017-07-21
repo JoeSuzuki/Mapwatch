@@ -66,7 +66,6 @@ struct UserService {
                         guard let post = Post(snapshot: $0)
                             else { return nil }
                         
-                        dispatchGroup.enter()
                         return post
             }
             

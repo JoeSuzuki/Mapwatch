@@ -16,4 +16,6 @@ target 'Mapwatch' do
   pod 'BDBOAuth1Manager', '~> 1.6.0'
   pod 'SDWebImage'
 pod 'STLocationRequest'
+pod 'SwiftySound'
+
 end

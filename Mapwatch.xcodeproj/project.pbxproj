@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		2A37F39AEFE5AB98B9C0A412 /* Pods_Mapwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4B7A6CEAE6C0D4AB1956F1 /* Pods_Mapwatch.framework */; };
 		FF1887BB1F21889400F7DAE2 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1887BA1F21889400F7DAE2 /* LocationServices.swift */; };
+		FF6068671F21C63D000DA037 /* MakeSchoolNotes.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FF6068661F21C63D000DA037 /* MakeSchoolNotes.xcdatamodel */; };
+		FF6068691F21C697000DA037 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6068681F21C697000DA037 /* ListNotesTableViewCell.swift */; };
+		FF60686D1F21C6A4000DA037 /* DisplayNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60686B1F21C6A4000DA037 /* DisplayNoteViewController.swift */; };
+		FF60686E1F21C6A4000DA037 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60686C1F21C6A4000DA037 /* ListNotesTableViewController.swift */; };
+		FF6068701F21C6B9000DA037 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60686F1F21C6B9000DA037 /* Date+convertToString.swift */; };
+		FF6068721F21C6C4000DA037 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6068711F21C6C4000DA037 /* CoreDataHelper.swift */; };
+		FF6068921F227FB8000DA037 /* hyena-laugh_daniel-simion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FF6068911F227FB8000DA037 /* hyena-laugh_daniel-simion.mp3 */; };
 		FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */; };
 		FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C21F1E5FB90097A62D /* Main.storyboard */; };
 		FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 		A00DC3A7E9905391225CFFBF /* Pods-Mapwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapwatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mapwatch/Pods-Mapwatch.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3304751C525E67FFCE7AB5 /* Pods-Mapwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapwatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mapwatch/Pods-Mapwatch.release.xcconfig"; sourceTree = "<group>"; };
 		FF1887BA1F21889400F7DAE2 /* LocationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
+		FF6068661F21C63D000DA037 /* MakeSchoolNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakeSchoolNotes.xcdatamodel; sourceTree = "<group>"; };
+		FF6068681F21C697000DA037 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
+		FF60686B1F21C6A4000DA037 /* DisplayNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayNoteViewController.swift; path = Controllers/DisplayNoteViewController.swift; sourceTree = "<group>"; };
+		FF60686C1F21C6A4000DA037 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewController.swift; path = Controllers/ListNotesTableViewController.swift; sourceTree = "<group>"; };
+		FF60686F1F21C6B9000DA037 /* Date+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
+		FF6068711F21C6C4000DA037 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		FF6068911F227FB8000DA037 /* hyena-laugh_daniel-simion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hyena-laugh_daniel-simion.mp3"; sourceTree = "<group>"; };
 		FFFCB2BB1F1E5FB90097A62D /* Mapwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFFCB2C31F1E5FB90097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,7 +152,11 @@
 			children = (
 				FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */,
 				FFFCB32F1F201FAE0097A62D /* ViewController */,
+				FF6068661F21C63D000DA037 /* MakeSchoolNotes.xcdatamodel */,
 				FFFCB37B1F2027540097A62D /* Firebase bs */,
+				FF6068911F227FB8000DA037 /* hyena-laugh_daniel-simion.mp3 */,
+				FF6068711F21C6C4000DA037 /* CoreDataHelper.swift */,
+				FF60686F1F21C6B9000DA037 /* Date+convertToString.swift */,
 				FFFCB32E1F201F9C0097A62D /* Storyboard */,
 				FFFCB32D1F201F6E0097A62D /* Yelp */,
 				FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */,
@@ -176,9 +194,12 @@
 			children = (
 				FFFCB3261F1FE1250097A62D /* TableViewController.swift */,
 				FFFCB2DE1F1E91F50097A62D /* AddLocationsViewController.swift */,
-				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
 				FFFCB3801F20F3320097A62D /* ViewController.swift */,
+				FF6068681F21C697000DA037 /* ListNotesTableViewCell.swift */,
+				FFFCB2D31F1E63C30097A62D /* MapViewController.swift */,
+				FF60686C1F21C6A4000DA037 /* ListNotesTableViewController.swift */,
 				FFFCB3241F1FE0DE0097A62D /* RestrictionViewController.swift */,
+				FF60686B1F21C6A4000DA037 /* DisplayNoteViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -250,6 +271,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = URE62YMM2S;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -279,6 +305,7 @@
 				FFFCB2C91F1E5FB90097A62D /* LaunchScreen.storyboard in Resources */,
 				FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */,
 				FFFCB32C1F1FF5040097A62D /* TableOfRestrictedFood.storyboard in Resources */,
+				FF6068921F227FB8000DA037 /* hyena-laugh_daniel-simion.mp3 in Resources */,
 				FFFCB2DD1F1E77250097A62D /* Preference.storyboard in Resources */,
 				FFFCB2D21F1E634B0097A62D /* MapView.storyboard in Resources */,
 				FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */,
@@ -342,11 +369,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6068721F21C6C4000DA037 /* CoreDataHelper.swift in Sources */,
+				FF6068671F21C63D000DA037 /* MakeSchoolNotes.xcdatamodel in Sources */,
+				FF60686E1F21C6A4000DA037 /* ListNotesTableViewController.swift in Sources */,
 				FFFCB2F81F1FAE180097A62D /* YelpClient.swift in Sources */,
 				FFFCB3271F1FE1250097A62D /* TableViewController.swift in Sources */,
 				FFFCB3681F2024880097A62D /* User.swift in Sources */,
 				FFFCB38E1F2102210097A62D /* MGPhotoHelper.swift in Sources */,
 				FFFCB3171F1FB14E0097A62D /* BusinesssAnnotation.swift in Sources */,
+				FF60686D1F21C6A4000DA037 /* DisplayNoteViewController.swift in Sources */,
 				FFFCB37D1F20E5090097A62D /* UITableView+Utility.swift in Sources */,
 				FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */,
 				FFFCB37A1F2025DF0097A62D /* Constants.swift in Sources */,
@@ -358,11 +389,13 @@
 				FFFCB35E1F2024880097A62D /* Storyboard+Utility.swift in Sources */,
 				FFFCB35C1F2024880097A62D /* CreateUsernameViewController.swift in Sources */,
 				FFFCB3161F1FB14E0097A62D /* Business.swift in Sources */,
+				FF6068691F21C697000DA037 /* ListNotesTableViewCell.swift in Sources */,
 				FFFCB3871F20FE270097A62D /* PostService.swift in Sources */,
 				FFFCB2D41F1E63C30097A62D /* MapViewController.swift in Sources */,
 				FFFCB38D1F2102210097A62D /* MGPaginationHelper.swift in Sources */,
 				FFFCB3851F20FD340097A62D /* Post.swift in Sources */,
 				FFFCB35D1F2024880097A62D /*  DatabaseReference+Location.swift in Sources */,
+				FF6068701F21C6B9000DA037 /* Date+convertToString.swift in Sources */,
 				FFFCB3891F2101CA0097A62D /*  StorageReference+Post.swift in Sources */,
 				FF1887BB1F21889400F7DAE2 /* LocationServices.swift in Sources */,
 				FFFCB3251F1FE0DE0097A62D /* RestrictionViewController.swift in Sources */,

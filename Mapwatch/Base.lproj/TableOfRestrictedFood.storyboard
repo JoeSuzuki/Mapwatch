@@ -62,7 +62,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="nWb-Y2-N0Q"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="boa-Ve-oFq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="boa-Ve-oFq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

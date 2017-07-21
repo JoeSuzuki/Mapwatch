@@ -16,6 +16,11 @@ typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true;
+    }
+ 
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
@@ -44,7 +49,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
+            print("Error signing in:")
         }
         
         guard let user = user

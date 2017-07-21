@@ -27,16 +27,20 @@ class RestrictionViewController: UIViewController {
     var ref:DatabaseReference?
     var search: String?
     
-    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet weak var searchBar: UITextField?
     
     @IBAction func addButton(_ sender: UIButton) {
-        guard let search = searchBar.text else {
+        guard let search = searchBar?.text else {
             return
         }
-        Business.searchWithTerm(term: search, completion: { (businesses: [Business]?, error: Error?) -> Void in
+        Business.searchWithTerm(term: "pizza", completion: { (businesses: [Business]?, error: Error?) -> Void in
             self.businesses = businesses
             if let businesses = businesses {
                 for business in businesses {
+                    
+                    //self.ref = Database.database().reference().child("users")
+                    //self.ref?.child("restraunts").setValue(business.address)
+                    //print(business.address)
                     //self.CreateRes(business.address!)
                 }
             }
@@ -47,11 +51,10 @@ class RestrictionViewController: UIViewController {
 
 
 override func viewDidLoad() {
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("users")
         super.viewDidLoad()
         //ref?.child("restraunts").child(user.uid).setValue("")
 
-    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }}
 
 

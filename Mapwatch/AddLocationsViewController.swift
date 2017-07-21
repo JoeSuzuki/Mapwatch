@@ -11,12 +11,46 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate,UISearchBarDelegate {
     var businessess: [Business?] = []
     var locationManager = CLLocationManager()
     var searchController: UISearchController!
     var searchText: String = ""
+    let manager = CLLocationManager()
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude,location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        map.setRegion(region, animated: true)
+        
+        self.map.showsUserLocation = true
+        print("coordinate")
+        print(location.coordinate)
+        
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+            if error != nil
+            {
+                print ("You messed up")
+            }
+            else
+            {
+                if let place = placemark?[0]
+                {
+                    if let checker = place.subThoroughfare
+                    {
+                        self.addressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!) "
+                    }
+                }
+            }
+        }
+    }
 
+    
+    
     // Map
     @IBAction func searchButton(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -86,6 +120,10 @@ class AddLocationsViewController: UIViewController,MKMapViewDelegate, CLLocation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.desiredAccuracy = kCLLocationAccuracyBest // accurate location
+        manager.requestWhenInUseAuthorization() // when used
+        manager.startUpdatingLocation()
+
     }
     @IBAction func addButton(_ sender: UIButton) {
         //button pressed, want to send to firebase to table view

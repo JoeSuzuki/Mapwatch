@@ -72,6 +72,7 @@ PODS:
   - SDWebImage/Core (4.0.0)
   - STLocationRequest (1.4.0):
     - Font-Awesome-Swift (~> 1.6.1)
+  - SwiftySound (0.4.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - SDWebImage
   - STLocationRequest
+  - SwiftySound
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -100,7 +102,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   STLocationRequest: 48e788990a914701dd556fec84bf740a6cffb1c4
+  SwiftySound: 4897b230859801982700bb08ec40fa000ea2e59a
 
-PODFILE CHECKSUM: 9fe783dd1fadd9fa5bb178459d10a949dfec0b4f
+PODFILE CHECKSUM: a73819b376c509bc01833ba61b368a33eeae0b10
 
 COCOAPODS: 1.2.1
