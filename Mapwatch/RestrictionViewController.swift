@@ -12,10 +12,14 @@ import CoreLocation
 import Firebase
 
 class RestrictionViewController: UIViewController {
-    func CreateRes(_ address: String){
-    var ref: DatabaseReference!
-    ref = Database.database().reference()
-        self.ref?.child("users").child("Restruants").setValue(["Locations": address])
+  //  func CreateRes(_ address: String){
+ //   var ref: DatabaseReference!
+  //  ref = Database.database().reference()
+    //    self.ref?.child("users").child("Restruants").setValue(["Locations": address])
+   // }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true;
     }
 
     var posts = [Post]()
@@ -33,7 +37,7 @@ class RestrictionViewController: UIViewController {
             self.businesses = businesses
             if let businesses = businesses {
                 for business in businesses {
-                    self.CreateRes(business.address!)
+                    //self.CreateRes(business.address!)
                 }
             }
         }
@@ -45,7 +49,7 @@ class RestrictionViewController: UIViewController {
 override func viewDidLoad() {
         ref = Database.database().reference()
         super.viewDidLoad()
-       // ref?.child("users").child(User.uid).child("Restraunts").setValue("")
+        //ref?.child("restraunts").child(user.uid).setValue("")
 
     self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }}

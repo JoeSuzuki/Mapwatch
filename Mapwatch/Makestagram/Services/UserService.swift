@@ -52,16 +52,14 @@ struct UserService {
 //        nameddd.setValue(name)
 //        add.setValue(address)
         
-    static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(user.uid)
+    static func posts(_ user: User, completion: @escaping ([Post]) -> Void) {
+        let ref = Database.database().reference().child("restraunt").child(user.uid)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
             }
             
-            let dispatchGroup = DispatchGroup()
-            
-            let posts: [Post] =
+            let restraunt: [Post] =
                 snapshot
                     .reversed()
                     .flatMap {
@@ -72,9 +70,6 @@ struct UserService {
                         return post
             }
             
-            dispatchGroup.notify(queue: .main, execute: {
-                completion(posts)
-            })
         })
     }
 }

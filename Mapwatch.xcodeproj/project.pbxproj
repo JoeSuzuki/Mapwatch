@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A37F39AEFE5AB98B9C0A412 /* Pods_Mapwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4B7A6CEAE6C0D4AB1956F1 /* Pods_Mapwatch.framework */; };
+		FF1887BB1F21889400F7DAE2 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1887BA1F21889400F7DAE2 /* LocationServices.swift */; };
 		FFFCB2BF1F1E5FB90097A62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */; };
 		FFFCB2C41F1E5FB90097A62D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C21F1E5FB90097A62D /* Main.storyboard */; };
 		FFFCB2C61F1E5FB90097A62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFCB2C51F1E5FB90097A62D /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		0B4B7A6CEAE6C0D4AB1956F1 /* Pods_Mapwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mapwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00DC3A7E9905391225CFFBF /* Pods-Mapwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapwatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mapwatch/Pods-Mapwatch.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3304751C525E67FFCE7AB5 /* Pods-Mapwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapwatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mapwatch/Pods-Mapwatch.release.xcconfig"; sourceTree = "<group>"; };
+		FF1887BA1F21889400F7DAE2 /* LocationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		FFFCB2BB1F1E5FB90097A62D /* Mapwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFCB2BE1F1E5FB90097A62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFFCB2C31F1E5FB90097A62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,11 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				FFFCB34B1F2024880097A62D /* UserService.swift */,
+				FFFCB3841F20FD330097A62D /* Post.swift */,
 				FFFCB3351F2024880097A62D /* CreateUsernameViewController.swift */,
 				FFFCB3371F2024880097A62D /*  DatabaseReference+Location.swift */,
 				FFFCB3861F20FE270097A62D /* PostService.swift */,
+				FF1887BA1F21889400F7DAE2 /* LocationServices.swift */,
 				FFFCB3791F2025DF0097A62D /* Constants.swift */,
-				FFFCB3841F20FD330097A62D /* Post.swift */,
 				FFFCB3381F2024880097A62D /* Storyboard+Utility.swift */,
 				FFFCB37C1F20E5090097A62D /* UITableView+Utility.swift */,
 				FFFCB3441F2024880097A62D /* User.swift */,
@@ -361,6 +364,7 @@
 				FFFCB3851F20FD340097A62D /* Post.swift in Sources */,
 				FFFCB35D1F2024880097A62D /*  DatabaseReference+Location.swift in Sources */,
 				FFFCB3891F2101CA0097A62D /*  StorageReference+Post.swift in Sources */,
+				FF1887BB1F21889400F7DAE2 /* LocationServices.swift in Sources */,
 				FFFCB3251F1FE0DE0097A62D /* RestrictionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

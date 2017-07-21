@@ -24,7 +24,10 @@ class MapViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDe
         locationRequestController.present(onViewController: self)
     }
     
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true;
+    }
     
     
     // Map
