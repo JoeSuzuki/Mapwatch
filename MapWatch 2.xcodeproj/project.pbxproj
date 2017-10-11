@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
+		FFCB79BE1F8EDDB1005FC32A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79B91F8EDDB1005FC32A /* ViewController.swift */; };
+		FFCB79BF1F8EDDB1005FC32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */; };
+		FFCB79C01F8EDDB1005FC32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */; };
+		FFCB79C11F8EDDB1005FC32A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */; };
 		FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */; };
-		FFEDD82F1F89E2FD00114AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDD82E1F89E2FD00114AE8 /* ViewController.swift */; };
-		FFEDD8321F89E2FD00114AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEDD8301F89E2FD00114AE8 /* Main.storyboard */; };
 		FFEDD8341F89E2FD00114AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */; };
-		FFEDD8371F89E2FD00114AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEDD8351F89E2FD00114AE8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapWatch_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.release.xcconfig"; sourceTree = "<group>"; };
+		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCB79B91F8EDDB1005FC32A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFCB79BD1F8EDDB1005FC32A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		FFEDD8291F89E2FD00114AE8 /* MapWatch 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapWatch 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFEDD82E1F89E2FD00114AE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFEDD8311F89E2FD00114AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FFEDD8361F89E2FD00114AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FFEDD8381F89E2FD00114AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3AEE8FEA12C1D34CDA54407 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D381024930D0D9ADCBFBA21F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */,
+				75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FFCB79C41F8EE067005FC32A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB79B91F8EDDB1005FC32A /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FFCB79C51F8EE097005FC32A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */,
+				FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */,
+				FFCB79BD1F8EDDB1005FC32A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFCB79C61F8EE0A4005FC32A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		FFEDD8201F89E2FD00114AE8 = {
 			isa = PBXGroup;
 			children = (
 				FFEDD82B1F89E2FD00114AE8 /* MapWatch 2 */,
 				FFEDD82A1F89E2FD00114AE8 /* Products */,
+				D381024930D0D9ADCBFBA21F /* Pods */,
+				A3AEE8FEA12C1D34CDA54407 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */,
-				FFEDD82E1F89E2FD00114AE8 /* ViewController.swift */,
-				FFEDD8301F89E2FD00114AE8 /* Main.storyboard */,
+				FFCB79C41F8EE067005FC32A /* View Controllers */,
+				FFCB79C51F8EE097005FC32A /* Supporting Files */,
+				FFCB79C61F8EE0A4005FC32A /* Storyboards */,
 				FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */,
-				FFEDD8351F89E2FD00114AE8 /* LaunchScreen.storyboard */,
-				FFEDD8381F89E2FD00114AE8 /* Info.plist */,
 			);
 			path = "MapWatch 2";
 			sourceTree = "<group>";
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFEDD83B1F89E2FD00114AE8 /* Build configuration list for PBXNativeTarget "MapWatch 2" */;
 			buildPhases = (
+				FDA150972C8265E68551B297 /* [CP] Check Pods Manifest.lock */,
 				FFEDD8251F89E2FD00114AE8 /* Sources */,
 				FFEDD8261F89E2FD00114AE8 /* Frameworks */,
 				FFEDD8271F89E2FD00114AE8 /* Resources */,
+				E02691E92046354D4A4B99C6 /* [CP] Embed Pods Frameworks */,
+				EC632C6957BFD65175CF7EB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,44 +178,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFEDD8371F89E2FD00114AE8 /* LaunchScreen.storyboard in Resources */,
+				FFCB79C01F8EDDB1005FC32A /* Main.storyboard in Resources */,
+				FFCB79C11F8EDDB1005FC32A /* GoogleService-Info.plist in Resources */,
 				FFEDD8341F89E2FD00114AE8 /* Assets.xcassets in Resources */,
-				FFEDD8321F89E2FD00114AE8 /* Main.storyboard in Resources */,
+				FFCB79BF1F8EDDB1005FC32A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E02691E92046354D4A4B99C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC632C6957BFD65175CF7EB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDA150972C8265E68551B297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFEDD8251F89E2FD00114AE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFEDD82F1F89E2FD00114AE8 /* ViewController.swift in Sources */,
+				FFCB79BE1F8EDDB1005FC32A /* ViewController.swift in Sources */,
 				FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FFEDD8301F89E2FD00114AE8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFEDD8311F89E2FD00114AE8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FFEDD8351F89E2FD00114AE8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFEDD8361F89E2FD00114AE8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FFEDD8391F89E2FD00114AE8 /* Debug */ = {
@@ -259,10 +343,11 @@
 		};
 		FFEDD83C1F89E2FD00114AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H8ZPW869Y2;
-				INFOPLIST_FILE = "MapWatch 2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MapWatch 2/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jsuzuki.MapWatch-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +357,11 @@
 		};
 		FFEDD83D1F89E2FD00114AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H8ZPW869Y2;
-				INFOPLIST_FILE = "MapWatch 2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MapWatch 2/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jsuzuki.MapWatch-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +388,7 @@
 				FFEDD83D1F89E2FD00114AE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
