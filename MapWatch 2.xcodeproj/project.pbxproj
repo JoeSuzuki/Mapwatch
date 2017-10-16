@@ -12,6 +12,9 @@
 		FFCB79BF1F8EDDB1005FC32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */; };
 		FFCB79C01F8EDDB1005FC32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */; };
 		FFCB79C11F8EDDB1005FC32A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */; };
+		FFCB79CA1F93F693005FC32A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79C91F93F693005FC32A /* LoginViewController.swift */; };
+		FFCB79CE1F942131005FC32A /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79CD1F942131005FC32A /* UIColor+Utility.swift */; };
+		FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79CF1F9437D8005FC32A /* Constants.swift */; };
 		FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */; };
 		FFEDD8341F89E2FD00114AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -25,6 +28,9 @@
 		FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFCB79BD1F8EDDB1005FC32A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
+		FFCB79C91F93F693005FC32A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		FFCB79CD1F942131005FC32A /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utility.swift"; path = "Extensions/UIColor+Utility.swift"; sourceTree = "<group>"; };
+		FFCB79CF1F9437D8005FC32A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		FFEDD8291F89E2FD00114AE8 /* MapWatch 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapWatch 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,27 +68,37 @@
 		FFCB79C41F8EE067005FC32A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFCB79C91F93F693005FC32A /* LoginViewController.swift */,
 				FFCB79B91F8EDDB1005FC32A /* ViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		FFCB79C51F8EE097005FC32A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */,
-				FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */,
-				FFCB79BD1F8EDDB1005FC32A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		FFCB79C61F8EE0A4005FC32A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */,
 				FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFCB79CC1F9420D7005FC32A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB79CD1F942131005FC32A /* UIColor+Utility.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		FFCB79D11F9437DD005FC32A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB79CF1F9437D8005FC32A /* Constants.swift */,
+				FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */,
+				FFCB79BD1F8EDDB1005FC32A /* Info.plist */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 		FFEDD8201F89E2FD00114AE8 = {
@@ -108,7 +124,8 @@
 			children = (
 				FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */,
 				FFCB79C41F8EE067005FC32A /* View Controllers */,
-				FFCB79C51F8EE097005FC32A /* Supporting Files */,
+				FFCB79CC1F9420D7005FC32A /* Extensions */,
+				FFCB79D11F9437DD005FC32A /* Supporting */,
 				FFCB79C61F8EE0A4005FC32A /* Storyboards */,
 				FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */,
 			);
@@ -240,6 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
+				FFCB79CE1F942131005FC32A /* UIColor+Utility.swift in Sources */,
+				FFCB79CA1F93F693005FC32A /* LoginViewController.swift in Sources */,
 				FFCB79BE1F8EDDB1005FC32A /* ViewController.swift in Sources */,
 				FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */,
 			);

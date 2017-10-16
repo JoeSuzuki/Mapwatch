@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    // MARK: functions
+    
+    func handleLogout() {
+        let loginController = LoginViewController()
+        present(loginController, animated: true, completion: nil)
     }
-
 
 }
 
