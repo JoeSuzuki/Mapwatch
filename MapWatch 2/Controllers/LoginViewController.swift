@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -27,8 +28,44 @@ class LoginViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor(r: 76, g: 217, b: 100), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
+    
+    func handleRegister() {
+        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
+                print("Missing email or password")
+                return
+        }
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User?, error) in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            //succesfully create a user
+            
+            guard let uid = user?.uid else {
+            return
+            }
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            let userRef = ref.child("users").child(uid)
+            
+            let values = ["username": name, "email": email] //set the values of email and password
+            userRef.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                if err != nil {
+                    print(err)
+                    return
+                }
+                print("Successfully saved user data") // successfully saved values on to firebase
+            })
+
+        })
+    }
     
     let nameTextField: UITextField = {
         let textField = UITextField()
@@ -68,7 +105,7 @@ class LoginViewController: UIViewController {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Group")
+        imageView.image = UIImage(named: "Bulb 2")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         return imageView
