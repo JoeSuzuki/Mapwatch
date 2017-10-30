@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
-		FFCB79BE1F8EDDB1005FC32A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79B91F8EDDB1005FC32A /* ViewController.swift */; };
+		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
+		FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */; };
 		FFCB79BF1F8EDDB1005FC32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */; };
 		FFCB79C01F8EDDB1005FC32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */; };
 		FFCB79C11F8EDDB1005FC32A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */; };
@@ -23,7 +24,8 @@
 		4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapWatch_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.release.xcconfig"; sourceTree = "<group>"; };
 		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
-		FFCB79B91F8EDDB1005FC32A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
+		FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		FFCB79BC1F8EDDB1005FC32A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -69,7 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				FFCB79C91F93F693005FC32A /* LoginViewController.swift */,
-				FFCB79B91F8EDDB1005FC32A /* ViewController.swift */,
+				FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */,
+				FF1F32541FA59DD200403A1A /* MapViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -258,9 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
+				FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */,
 				FFCB79CE1F942131005FC32A /* UIColor+Utility.swift in Sources */,
 				FFCB79CA1F93F693005FC32A /* LoginViewController.swift in Sources */,
-				FFCB79BE1F8EDDB1005FC32A /* ViewController.swift in Sources */,
+				FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */,
 				FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

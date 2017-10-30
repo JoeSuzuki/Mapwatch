@@ -11,4 +11,5 @@ target 'MapWatch 2' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod "YelpAPI"
 end

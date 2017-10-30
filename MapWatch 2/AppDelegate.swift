@@ -20,8 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds) // displays view without storyboard
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
-        
+        window?.rootViewController = UINavigationController(rootViewController: MapViewController())
+       
+        // Override point for customization after application launch.
+        UINavigationBar.appearance().tintColor = UIColor(r: 76, g: 217, b: 100)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        self.window!.backgroundColor = UIColor.white
+
         return true
     }
 
