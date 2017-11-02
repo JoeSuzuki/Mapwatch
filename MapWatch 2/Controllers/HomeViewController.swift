@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableData: Array<Any> = []
     
     let ContainerView: UIView = {
@@ -23,7 +23,10 @@ class HomeViewController: UIViewController {
     }()
     let restraintsTableView: UITableView = {
         let view = UITableView()
-        
+        view.delegate = self as? UITableViewDelegate
+        view.dataSource = self as? UITableViewDataSource
+        view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -47,28 +50,32 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadRestrictionsOnTable()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(mapView))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         view.backgroundColor = UIColor.white
         view.addSubview(ContainerView)
         setupContainerView()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        loadRestrictionsOnTable()
+        super.viewWillAppear(animated)
+
     }
+    
     
     func loadRestrictionsOnTable() {
         let uid = Auth.auth().currentUser?.uid
         Database.database().reference().child("restrictions").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            self.tableData = []
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 let lazyMapCollection = dictionary.keys // takes all the keys from firebase
                 let stringArray = Array(lazyMapCollection.map { String($0) })
                 print(stringArray)
                 self.tableData = stringArray + self.tableData
-                print(self.tableData)
+                print("ss\(self.tableData)")
+                self.restraintsTableView.reloadData()
             }
         }, withCancel: nil)
     }
@@ -107,8 +114,6 @@ class HomeViewController: UIViewController {
     }
     func addRestraintToTable() {
         if let input = inputTextField.text {
-            print(input)
-        
 
         var ref: DatabaseReference!
         let uid = Auth.auth().currentUser?.uid
@@ -125,6 +130,7 @@ class HomeViewController: UIViewController {
             }
         })
         }
+        
     }
 
     func mapView() {
@@ -141,6 +147,18 @@ class HomeViewController: UIViewController {
         let loginController = LoginViewController()
         present(loginController, animated: true, completion: nil)
     }
+    // MARK: - Table view data source
+      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return tableData.count
+    }
     
-}
+      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.textColor = UIColor(r: 76, g: 217, b: 100)
+        cell.textLabel?.text = tableData[indexPath.row] as! String
+        
+        return cell
+    }
 
+}
