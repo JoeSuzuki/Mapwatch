@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
 		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
-		FFBBF43D1FA957ED00B0ED65 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBF43C1FA957ED00B0ED65 /* TableViewController.swift */; };
+		FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2231FAE71CF0079882E /* FoodService.swift */; };
 		FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */; };
 		FFCB79BF1F8EDDB1005FC32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */; };
 		FFCB79C01F8EDDB1005FC32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */; };
@@ -26,7 +26,7 @@
 		75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.release.xcconfig"; sourceTree = "<group>"; };
 		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
-		FFBBF43C1FA957ED00B0ED65 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FF7BF2231FAE71CF0079882E /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodService.swift; path = Services/FoodService.swift; sourceTree = "<group>"; };
 		FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -69,12 +69,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF7BF2251FAE71D60079882E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF7BF2231FAE71CF0079882E /* FoodService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		FFCB79C41F8EE067005FC32A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FFCB79C91F93F693005FC32A /* LoginViewController.swift */,
 				FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */,
-				FFBBF43C1FA957ED00B0ED65 /* TableViewController.swift */,
 				FF1F32541FA59DD200403A1A /* MapViewController.swift */,
 			);
 			name = "View Controllers";
@@ -132,6 +139,7 @@
 				FFCB79C41F8EE067005FC32A /* View Controllers */,
 				FFCB79CC1F9420D7005FC32A /* Extensions */,
 				FFCB79D11F9437DD005FC32A /* Supporting */,
+				FF7BF2251FAE71D60079882E /* Services */,
 				FFCB79C61F8EE0A4005FC32A /* Storyboards */,
 				FFEDD8331F89E2FD00114AE8 /* Assets.xcassets */,
 			);
@@ -264,12 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
-				FFBBF43D1FA957ED00B0ED65 /* TableViewController.swift in Sources */,
 				FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */,
 				FFCB79CE1F942131005FC32A /* UIColor+Utility.swift in Sources */,
 				FFCB79CA1F93F693005FC32A /* LoginViewController.swift in Sources */,
 				FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */,
 				FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */,
+				FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

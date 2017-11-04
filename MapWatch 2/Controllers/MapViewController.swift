@@ -43,7 +43,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }()
     
     func backFunc() {
-//        self.dismiss(animated: true, completion: nil)
         let homeViewController = HomeViewController()
         let newController = UINavigationController(rootViewController: homeViewController)
         present(newController, animated: true, completion: nil)
