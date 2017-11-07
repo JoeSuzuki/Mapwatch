@@ -18,36 +18,32 @@ class HomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableData = restrictionService.getDataFromFirebase(tableData)
-        
-        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        restrictionService.getDataFromFirebase(tableData) { (dataArray) -> () in
+            self.tableData = dataArray
+            self.tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+            self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            
+            self.view.addSubview(self.tableView)
+        }
         
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(mapView))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
-        
-        self.view.addSubview(tableView)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(mapView))
     }
-    
     
     func mapView() {
         self.dismiss(animated: true, completion: nil)
     }
-    
     func handleLogout() {
         do {
             try Auth.auth().signOut()
         } catch let logoutError {
             print(logoutError)
         }
-        
         let loginController = LoginViewController()
         present(loginController, animated: true, completion: nil)
     }
-    
 }
 // MARK: - UITableViewDelegate
 
@@ -61,18 +57,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         cell.textLabel?.textColor = UIColor(r: 76, g: 217, b: 100)
         
         if indexPath.row == tableData.count {
-            print("works bitttchhh")
         } else if indexPath.row == tableData.count + 1 {
-            print("works")
             cell.textLabel?.text = "Add Restriction"
-            restrictionService.createFoodRestrictions("sss", tableData)
         } else {
             cell.textLabel?.text = tableData[indexPath.row]
-            
         }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == tableData.count {
+            print("works bitttchhh")
+        } else if indexPath.row == tableData.count + 1 {
+            restrictionService.createFoodRestrictions("sddmmsaaass", tableData)
+        }
+    }
+   // func tableview
 }

@@ -14,15 +14,16 @@ struct FoodService {
    
     private var restrictionsRef: DatabaseReference!
 
-    mutating func getDataFromFirebase(_ tableData: [String]) -> [String] {
+    mutating func getDataFromFirebase(_ tableData: [String], completion: @escaping ([String]) -> ()) {
         let uid = Auth.auth().currentUser?.uid
         var dataArray = tableData
         restrictionsRef = Database.database().reference().child("restrictions").child(uid!)
         restrictionsRef.observe(DataEventType.value, with: { (snapshot) in
             let restrictions = snapshot.value as? [String] ?? []
             dataArray = restrictions
+            print(dataArray)
+            completion(dataArray)
         })
-        return dataArray
     }
     
     mutating func createFoodRestrictions(_ foodRestriction: String, _ tableData: [String]) {

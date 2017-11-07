@@ -64,6 +64,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             locationManager.distanceFilter = 500
             locationManager.startUpdatingLocation()
         }
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+
     }
    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
@@ -95,7 +98,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //x, y, width, height
         backButton.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
         backButton.topAnchor.constraint(equalTo: mapView.bottomAnchor).isActive = true
-        backButton.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
+        backButton.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1/2).isActive = true
         backButton.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 1/12).isActive = true
     }
     func checkIfUserIsLoggedOn() {

@@ -10,6 +10,7 @@
 		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
 		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
 		FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2231FAE71CF0079882E /* FoodService.swift */; };
+		FF7BF2291FAE939A0079882E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2281FAE939A0079882E /* UserService.swift */; };
 		FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */; };
 		FFCB79BF1F8EDDB1005FC32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */; };
 		FFCB79C01F8EDDB1005FC32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
 		FF7BF2231FAE71CF0079882E /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodService.swift; path = Services/FoodService.swift; sourceTree = "<group>"; };
+		FF7BF2281FAE939A0079882E /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Services/UserService.swift; sourceTree = "<group>"; };
 		FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		FFCB79BA1F8EDDB1005FC32A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFCB79BB1F8EDDB1005FC32A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		FF7BF2251FAE71D60079882E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FF7BF2281FAE939A0079882E /* UserService.swift */,
 				FF7BF2231FAE71CF0079882E /* FoodService.swift */,
 			);
 			name = Services;
@@ -183,6 +186,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = H8ZPW869Y2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -272,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
+				FF7BF2291FAE939A0079882E /* UserService.swift in Sources */,
 				FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */,
 				FFCB79CE1F942131005FC32A /* UIColor+Utility.swift in Sources */,
 				FFCB79CA1F93F693005FC32A /* LoginViewController.swift in Sources */,

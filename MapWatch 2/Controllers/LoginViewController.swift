@@ -41,51 +41,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func handleLogin() {
-        guard let email = emailTextField.text, let password = passwordTextField.text else {
-            print("Missing email or password")
-            return
-        }
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if error != nil {
-                print(error)
-                return
-            }
-            //succesfully login a user
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    func handleRegister() {
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
-                print("Missing email or password")
-                return
-        }
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User?, error) in
-            if error != nil {
-                print(error)
-                return
-            }
-            //succesfully create a user
-            guard let uid = user?.uid else {
-                return
-            }
-            
-            var ref: DatabaseReference!
-            ref = Database.database().reference()
-            let userRef = ref.child("users").child(uid)
-            
-            let values = ["username": name, "email": email] //set the values of email and password
-            userRef.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if err != nil {
-                    print(err)
-                    return
-                }
-                self.dismiss(animated: true, completion: nil)
-            })
-        })
-    }
-    
     let nameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Name"
@@ -258,6 +213,49 @@ class LoginViewController: UIViewController {
         profileImageView.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+    }
+    
+    func handleLogin() {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Missing email or password")
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+        }
+    }
+    
+    func handleRegister() {
+        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
+            print("Missing email or password")
+            return
+        }
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User?, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            //succesfully create a user
+            guard let uid = user?.uid else {
+                return
+            }
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            let userRef = ref.child("users").child(uid)
+            
+            let values = ["username": name, "email": email] //set the values of email and password
+            userRef.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                if err != nil {
+                    print(err)
+                    return
+                }
+                self.dismiss(animated: true, completion: nil)
+            })
+        })
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
