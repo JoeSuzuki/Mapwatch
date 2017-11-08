@@ -50,12 +50,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(r: 76, g: 217, b: 100)
+       // view.backgroundColor = UIColor(r: 76, g: 217, b: 100)
         view.addSubview(containerView)
-        view.addSubview(backButton)
         setupContainerView()
         checkIfUserIsLoggedOn()
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
         self.locationManager = CLLocationManager() // sets the current location of user
         if let locationManager = self.locationManager {
             locationManager.delegate = self
@@ -65,7 +63,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             locationManager.startUpdatingLocation()
         }
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        locationManager?.startUpdatingLocation()
 
     }
    
@@ -87,19 +88,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         containerView.heightAnchor.constraint(equalTo: view.heightAnchor, constant: 0).isActive = true
         
         containerView.addSubview(mapView)
-        containerView.addSubview(backButton)
 
         //x, y, width, height
         mapView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
         mapView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
         mapView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
-        mapView.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 11/12).isActive = true
+        mapView.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 13/14).isActive = true
 
-        //x, y, width, height
-        backButton.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
-        backButton.topAnchor.constraint(equalTo: mapView.bottomAnchor).isActive = true
-        backButton.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1/2).isActive = true
-        backButton.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 1/12).isActive = true
     }
     func checkIfUserIsLoggedOn() {
         if Auth.auth().currentUser?.uid == nil {// detects if user is not logged in
@@ -111,6 +106,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let dictionary = snapshot.value as? [String: AnyObject] {
                     self.navigationItem.title = dictionary["username"] as? String
+                    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(r: 76, g: 217, b: 100)]
                 }
             }, withCancel: nil)
         }

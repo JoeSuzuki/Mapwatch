@@ -28,8 +28,8 @@ class HomeViewController: UIViewController{
             self.view.addSubview(self.tableView)
         }
         
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(mapView))
+   //     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
+       // navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(mapView))
     }
     
     func mapView() {
@@ -59,13 +59,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == tableData.count {
         } else if indexPath.row == tableData.count + 1 {
             cell.textLabel?.text = "Add Restriction"
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = UIColor.white
+            cell.backgroundColor = UIColor(r: 76, g: 217, b: 100)
         } else {
             cell.textLabel?.text = tableData[indexPath.row]
         }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        if indexPath.row == tableData.count + 1 {
+            return 70
+        } else {
+            return 50
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == tableData.count {
