@@ -16,16 +16,14 @@ class ProfileViewController: UIViewController {
         self.title = "Profile"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
     }
- 
-    func handleLogout() {
+
+    @objc func handleLogout() {
         do {
             try Auth.auth().signOut()
         } catch let logoutError {
             print(logoutError)
         }
-        
         let loginController = LoginViewController()
         present(loginController, animated: true, completion: nil)
     }
-
 }

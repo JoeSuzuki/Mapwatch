@@ -28,23 +28,9 @@ class HomeViewController: UIViewController{
             self.view.addSubview(self.tableView)
         }
         
-   //     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
-       // navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(mapView))
-    }
-    
-    func mapView() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    func handleLogout() {
-        do {
-            try Auth.auth().signOut()
-        } catch let logoutError {
-            print(logoutError)
-        }
-        let loginController = LoginViewController()
-        present(loginController, animated: true, completion: nil)
     }
 }
+
 // MARK: - UITableViewDelegate
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -54,14 +40,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.textColor = UIColor(r: 76, g: 217, b: 100)
+        cell.textLabel?.textColor = UIColor(r: 76, g: 200, b: 100)
         
         if indexPath.row == tableData.count {
         } else if indexPath.row == tableData.count + 1 {
             cell.textLabel?.text = "Add Restriction"
             cell.textLabel?.textAlignment = .center
             cell.textLabel?.textColor = UIColor.white
-            cell.backgroundColor = UIColor(r: 76, g: 217, b: 100)
+            cell.backgroundColor = UIColor(r: 76, g: 200, b: 100)
         } else {
             cell.textLabel?.text = tableData[indexPath.row]
         }
@@ -69,7 +55,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == tableData.count + 1 {
-            return 70
+            return 60
         } else {
             return 50
         }

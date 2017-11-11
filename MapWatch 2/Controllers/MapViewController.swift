@@ -32,17 +32,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }()
     let backButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(r: 249, g: 249, b: 249)
+        button.backgroundColor = UIColor(r: 76, g: 200, b: 100)
         button.setTitle("View Restraints", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor(r: 76, g: 217, b: 100), for: .normal)
+        button.setTitleColor(UIColor(r: 76, g: 200, b: 100), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
         button.addTarget(self, action: #selector(backFunc), for: .touchUpInside)
         return button
     }()
     
-    func backFunc() {
+    @objc func backFunc() {
         let homeViewController = HomeViewController()
         let newController = UINavigationController(rootViewController: homeViewController)
         present(newController, animated: true, completion: nil)
@@ -62,12 +62,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             locationManager.distanceFilter = 500
             locationManager.startUpdatingLocation()
         }
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor(r: 76, g: 217, b: 100)]
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        locationManager?.startUpdatingLocation()
-
     }
    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
@@ -106,7 +100,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let dictionary = snapshot.value as? [String: AnyObject] {
                     self.navigationItem.title = dictionary["username"] as? String
-                    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(r: 76, g: 217, b: 100)]
+                    self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
                 }
             }, withCancel: nil)
         }
@@ -120,8 +114,5 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let loginController = LoginViewController()
         present(loginController, animated: true, completion: nil)
-    }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
     }
 }

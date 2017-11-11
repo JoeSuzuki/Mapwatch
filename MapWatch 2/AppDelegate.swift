@@ -21,12 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds) // displays view without storyboard
         window?.makeKeyAndVisible()
         
-        //window?.rootViewController = UINavigationController(rootViewController: MapViewController())
         window?.rootViewController = CustomTabBarController()
 
-        UINavigationBar.appearance().tintColor = UIColor(r: 76, g: 217, b: 100)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor(r: 76, g: 200, b: 100) // 76, 217. 100
+     
+        UIApplication.shared.statusBarStyle = .lightContent
+
         self.window!.backgroundColor = UIColor.white
 
         return true
