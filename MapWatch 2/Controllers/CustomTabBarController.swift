@@ -27,8 +27,13 @@ class CustomTabBarController: UITabBarController {
         let profileNavController = UINavigationController(rootViewController: profileController)
         profileNavController.tabBarItem.image = UIImage(named: "")
         profileNavController.tabBarItem.title = "Settings"
+        
+        let restrictionsController = RestrictionsViewController()
+        let restrictionsNavController = UINavigationController(rootViewController: restrictionsController)
+        restrictionsNavController.tabBarItem.image = UIImage(named: "")
+        restrictionsNavController.tabBarItem.title = "Restrictions"
 
-        viewControllers = [mapNavController, homeNavController, profileNavController]
+        viewControllers = [mapNavController, homeNavController, restrictionsNavController, profileNavController]
     }
 
 }
