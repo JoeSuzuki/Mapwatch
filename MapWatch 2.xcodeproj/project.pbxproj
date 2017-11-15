@@ -10,6 +10,7 @@
 		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
 		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
 		FF6976061FBA6F38005BC897 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6976051FBA6F38005BC897 /* Restriction.swift */; };
+		FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */; };
 		FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2231FAE71CF0079882E /* FoodService.swift */; };
 		FF7BF2291FAE939A0079882E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2281FAE939A0079882E /* UserService.swift */; };
 		FF7BF22B1FB198F20079882E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF22A1FB198F20079882E /* ProfileViewController.swift */; };
@@ -32,6 +33,7 @@
 		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
 		FF6976051FBA6F38005BC897 /* Restriction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
+		FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Utility.swift"; path = "Extensions/UIView+Utility.swift"; sourceTree = "<group>"; };
 		FF7BF2231FAE71CF0079882E /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodService.swift; path = Services/FoodService.swift; sourceTree = "<group>"; };
 		FF7BF2281FAE939A0079882E /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Services/UserService.swift; sourceTree = "<group>"; };
 		FF7BF22A1FB198F20079882E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FFCB79CD1F942131005FC32A /* UIColor+Utility.swift */,
+				FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */,
 				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
 				FF7BF2291FAE939A0079882E /* UserService.swift in Sources */,
 				FF7BF22D1FB281770079882E /* CustomTabBarController.swift in Sources */,
@@ -449,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/MapWatch 2/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jsuzuki.MapWatch-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,6 +469,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/MapWatch 2/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jsuzuki.MapWatch-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
