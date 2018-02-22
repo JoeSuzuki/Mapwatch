@@ -30,7 +30,7 @@ class FoodListView: UICollectionViewCell {
     
     let lightBlueView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(r: 90, g: 200, b: 250, a: 0.5)
+        view.backgroundColor = UIColor(r: 90, g: 200, b: 250)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

@@ -17,9 +17,8 @@ class FoodGroupsViewController: UICollectionViewController,UICollectionViewDeleg
         view.backgroundColor = .white
         
         collectionView?.backgroundColor = UIColor(r: 76, g: 200, b: 100)
-        collectionView?.register(GroupCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(FoodListView.self, forCellWithReuseIdentifier: cellId)
         
-        setupNavigationBarItems()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -35,8 +34,5 @@ class FoodGroupsViewController: UICollectionViewController,UICollectionViewDeleg
         return CGSize(width: view.frame.width, height: 200)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 40)
-    }
 }
 

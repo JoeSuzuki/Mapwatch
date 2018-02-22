@@ -32,10 +32,15 @@ class CustomTabBarController: UITabBarController {
         let restrictionsNavController = UINavigationController(rootViewController: restrictionsController)
         restrictionsNavController.tabBarItem.image = UIImage(named: "")
         restrictionsNavController.tabBarItem.title = "Restrictions"
+        
+        let foodGroupsController = FoodGroupsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let foodGroupsNavController = UINavigationController(rootViewController: foodGroupsController)
+        foodGroupsNavController.tabBarItem.image = UIImage(named: "")
+        foodGroupsNavController.tabBarItem.title = "Food"
 
 //        let homeController = GroupHomeController(collectionViewLayout: UICollectionViewFlowLayout())
 
-        viewControllers = [mapNavController, homeNavController, restrictionsNavController, profileNavController]
+        viewControllers = [mapNavController, homeNavController, restrictionsNavController, foodGroupsNavController, profileNavController]
     }
 
 }

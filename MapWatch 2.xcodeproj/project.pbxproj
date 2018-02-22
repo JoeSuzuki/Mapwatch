@@ -10,7 +10,7 @@
 		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
 		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
 		FF3935C5203E65B5004D5677 /* FoodGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */; };
-		FF3935C9203E675B004D5677 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935C8203E675A004D5677 /* FoodListView.swift */; };
+		FF3935CC203E6851004D5677 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935CB203E6851004D5677 /* FoodListView.swift */; };
 		FF6976061FBA6F38005BC897 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6976051FBA6F38005BC897 /* Restriction.swift */; };
 		FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */; };
 		FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2231FAE71CF0079882E /* FoodService.swift */; };
@@ -35,7 +35,7 @@
 		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
 		FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodGroupsViewController.swift; path = Controllers/FoodGroupsViewController.swift; sourceTree = "<group>"; };
-		FF3935C8203E675A004D5677 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodListView.swift; path = "/Users/Joesuzuki/Documents/GitHub/Mapwatch/MapWatch 2/FoodListView.swift"; sourceTree = "<absolute>"; };
+		FF3935CB203E6851004D5677 /* FoodListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListView.swift; path = Views/FoodListView.swift; sourceTree = "<group>"; };
 		FF6976051FBA6F38005BC897 /* Restriction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
 		FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Utility.swift"; path = "Extensions/UIView+Utility.swift"; sourceTree = "<group>"; };
 		FF7BF2231FAE71CF0079882E /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodService.swift; path = Services/FoodService.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		FF3935CA203E675E004D5677 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FF3935C8203E675A004D5677 /* FoodListView.swift */,
+				FF3935CB203E6851004D5677 /* FoodListView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -363,7 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3935C9203E675B004D5677 /* FoodListView.swift in Sources */,
+				FF3935CC203E6851004D5677 /* FoodListView.swift in Sources */,
 				FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */,
 				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
 				FF7BF2291FAE939A0079882E /* UserService.swift in Sources */,
