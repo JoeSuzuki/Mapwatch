@@ -99,7 +99,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let uid = Auth.auth().currentUser?.uid
             Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let dictionary = snapshot.value as? [String: AnyObject] {
-                    self.navigationItem.title = dictionary["username"] as? String
+                    guard let username = dictionary["username"] else {
+                        return
+                    }
+            
+                    self.navigationItem.title = "Welcome " + (username as! String) + "!"
                     self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
                 }
             }, withCancel: nil)
