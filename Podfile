@@ -12,4 +12,5 @@ target 'MapWatch 2' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod "YelpAPI"
+  pod 'Kingfisher', '~> 4.0'
 end

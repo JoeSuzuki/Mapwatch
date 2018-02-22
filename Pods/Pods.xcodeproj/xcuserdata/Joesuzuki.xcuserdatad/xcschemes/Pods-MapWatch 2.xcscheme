@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69532EC3F6098A8D78233CE85CC92F6A"
+               BlueprintIdentifier = "D462BE58153B4B4D17F7314A66F5242C"
                BuildableName = "Pods_MapWatch_2.framework"
                BlueprintName = "Pods-MapWatch 2"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "69532EC3F6098A8D78233CE85CC92F6A"
+            BlueprintIdentifier = "D462BE58153B4B4D17F7314A66F5242C"
             BuildableName = "Pods_MapWatch_2.framework"
             BlueprintName = "Pods-MapWatch 2"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2678E84183EA14A16A615312 /* Pods_MapWatch_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6552041C2E3C5497C58877 /* Pods_MapWatch_2.framework */; };
 		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
+		FF3935C5203E65B5004D5677 /* FoodGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */; };
+		FF3935C9203E675B004D5677 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935C8203E675A004D5677 /* FoodListView.swift */; };
 		FF6976061FBA6F38005BC897 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6976051FBA6F38005BC897 /* Restriction.swift */; };
 		FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */; };
 		FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2231FAE71CF0079882E /* FoodService.swift */; };
@@ -32,6 +34,8 @@
 		75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.release.xcconfig"; sourceTree = "<group>"; };
 		8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapWatch 2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
+		FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodGroupsViewController.swift; path = Controllers/FoodGroupsViewController.swift; sourceTree = "<group>"; };
+		FF3935C8203E675A004D5677 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodListView.swift; path = "/Users/Joesuzuki/Documents/GitHub/Mapwatch/MapWatch 2/FoodListView.swift"; sourceTree = "<absolute>"; };
 		FF6976051FBA6F38005BC897 /* Restriction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
 		FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Utility.swift"; path = "Extensions/UIView+Utility.swift"; sourceTree = "<group>"; };
 		FF7BF2231FAE71CF0079882E /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodService.swift; path = Services/FoodService.swift; sourceTree = "<group>"; };
@@ -81,6 +85,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF3935CA203E675E004D5677 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF3935C8203E675A004D5677 /* FoodListView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		FF6976011FBA6DB9005BC897 /* Profile/ Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 			children = (
 				FFCB79B91F8EDDB1005FC32A /* HomeViewController.swift */,
 				FF86302B1FB6F91000772B61 /* RestrictionsViewController.swift */,
+				FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */,
 			);
 			name = "Restrictions table";
 			sourceTree = "<group>";
@@ -194,6 +207,7 @@
 			children = (
 				FFEDD82C1F89E2FD00114AE8 /* AppDelegate.swift */,
 				FFCB79C41F8EE067005FC32A /* View Controllers */,
+				FF3935CA203E675E004D5677 /* Views */,
 				FFCB79CC1F9420D7005FC32A /* Extensions */,
 				FF6976071FBA6F3F005BC897 /* Models */,
 				FFCB79D11F9437DD005FC32A /* Supporting */,
@@ -288,9 +302,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/YelpAPI/YelpAPI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YelpAPI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -303,9 +326,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -318,13 +344,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapWatch 2-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -334,12 +363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3935C9203E675B004D5677 /* FoodListView.swift in Sources */,
 				FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */,
 				FFCB79D01F9437D8005FC32A /* Constants.swift in Sources */,
 				FF7BF2291FAE939A0079882E /* UserService.swift in Sources */,
 				FF7BF22D1FB281770079882E /* CustomTabBarController.swift in Sources */,
 				FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */,
 				FFCB79CE1F942131005FC32A /* UIColor+Utility.swift in Sources */,
+				FF3935C5203E65B5004D5677 /* FoodGroupsViewController.swift in Sources */,
 				FF86302C1FB6F91000772B61 /* RestrictionsViewController.swift in Sources */,
 				FFCB79CA1F93F693005FC32A /* LoginViewController.swift in Sources */,
 				FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */,

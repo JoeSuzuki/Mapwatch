@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '01E59E228D39CC874E624868E42C26C5'
-               BlueprintName = 'YelpAPI'
+               BlueprintIdentifier = '6F712943B3C5592E82604940D11CE08A'
+               BlueprintName = 'Kingfisher'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'YelpAPI.framework'>
+               BuildableName = 'Kingfisher.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

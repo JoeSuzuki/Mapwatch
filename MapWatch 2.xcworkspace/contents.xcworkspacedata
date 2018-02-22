@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Joesuzuki/Documents/GitHub/Mapwatch/MapWatch 2/FoodListView.swift">
+   </FileRef>
+   <FileRef
       location = "group:MapWatch 2.xcodeproj">
    </FileRef>
    <FileRef

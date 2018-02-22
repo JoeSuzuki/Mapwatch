@@ -105,23 +105,6 @@ class CellContent: UITableViewCell {
         cellView.addSubview(pictureImageView)
         cellView.addSubview(titleLabel)
         
-//        //x, y, width, height
-//        cellView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8).isActive = true
-//        cellView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 4).isActive = true
-//        cellView.rightAnchor.constraint(equalTo: rightAnchor, constant: 8).isActive = true
-//        cellView.topAnchor.constraint(equalTo: topAnchor, constant:4).isActive = true
-//
-//        //x, y, width, height
-//        pictureImageView.leftAnchor.constraint(equalTo: cellView.leftAnchor, constant: 8).isActive = true
-//        pictureImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-//        pictureImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-//        pictureImageView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
-//
-//        //x, y, width, height
-//        titleLabel.leftAnchor.constraint(equalTo: pictureImageView.rightAnchor, constant: 20).isActive = true
-//        titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 20).isActive = true
-//        titleLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-//        titleLabel.centerYAnchor.constraint(equalTo: pictureImageView.centerYAnchor).isActive = true
         
         cellView.setAnchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 4, paddingLeft: 8, paddingBottom: 4, paddingRight: 8)
         
