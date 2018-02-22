@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+extension UIView { // Credits to LBTAComponents API, Brian Vong
     
     func setCellShadow() {
         self.layer.shadowColor = UIColor.black.cgColor

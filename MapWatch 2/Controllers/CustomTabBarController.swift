@@ -33,6 +33,8 @@ class CustomTabBarController: UITabBarController {
         restrictionsNavController.tabBarItem.image = UIImage(named: "")
         restrictionsNavController.tabBarItem.title = "Restrictions"
 
+//        let homeController = GroupHomeController(collectionViewLayout: UICollectionViewFlowLayout())
+
         viewControllers = [mapNavController, homeNavController, restrictionsNavController, profileNavController]
     }
 

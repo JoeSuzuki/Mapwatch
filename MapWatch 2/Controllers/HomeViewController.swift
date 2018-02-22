@@ -15,6 +15,23 @@ class HomeViewController: UIViewController{
     var tableView = UITableView()
     var restrictionService = FoodService()
     
+    let addRestrictionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .blue //UIColor(r: 76, g: 200, b: 100)
+        button.setTitle("Add Restraint", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setTitleColor(UIColor(r: 76, g: 200, b: 100), for: .normal)
+        button.tintColor = .white
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(addRestriction), for: .touchUpInside)
+        return button
+    }()
+    
+    func addRestriction() {
+        restrictionService.createFoodRestrictions("sddmmsaaass", tableData)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,10 +42,24 @@ class HomeViewController: UIViewController{
             self.tableView.dataSource = self
             self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
             
-            self.view.addSubview(self.tableView)
+//            self.view.addSubview(self.tableView)
+            self.setUpTableView()
         }
         
     }
+    func setUpTableView() {
+        view.addSubview(tableView)
+        view.addSubview(addRestrictionButton)
+        
+        //        //x, y, width, height
+        //        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        //        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        //        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        //        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        tableView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: addRestrictionButton.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        addRestrictionButton.setAnchor(top: tableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+    }
+
 }
 
 // MARK: - UITableViewDelegate
@@ -46,7 +77,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         } else if indexPath.row == tableData.count + 1 {
             cell.textLabel?.text = "Add Restriction"
             cell.textLabel?.textAlignment = .center
-            cell.textLabel?.textColor = UIColor.white
+            cell.textLabel?.textColor = .white
             cell.backgroundColor = UIColor(r: 76, g: 200, b: 100)
         } else {
             cell.textLabel?.text = tableData[indexPath.row]
@@ -62,7 +93,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == tableData.count {
-            print("works bitttchhh")
+            print("works ")
         } else if indexPath.row == tableData.count + 1 {
             restrictionService.createFoodRestrictions("sddmmsaaass", tableData)
         }

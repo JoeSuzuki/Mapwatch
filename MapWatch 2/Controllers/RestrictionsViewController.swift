@@ -67,7 +67,7 @@ class RestrictionsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Restrictions"
+        return ""
     }
 
 
