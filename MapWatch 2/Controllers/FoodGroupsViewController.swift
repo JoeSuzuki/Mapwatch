@@ -16,7 +16,7 @@ class FoodGroupsViewController: UICollectionViewController,UICollectionViewDeleg
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        collectionView?.backgroundColor = UIColor(r: 76, g: 200, b: 100)
+        collectionView?.backgroundColor = .white // UIColor(r: 76, g: 200, b: 100)
         collectionView?.register(FoodListView.self, forCellWithReuseIdentifier: cellId)
         
     }
@@ -31,7 +31,7 @@ class FoodGroupsViewController: UICollectionViewController,UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        return CGSize(width: view.frame.width, height: 250)
     }
     
 }

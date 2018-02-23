@@ -11,6 +11,7 @@
 		FF1F32551FA59DD200403A1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F32541FA59DD200403A1A /* MapViewController.swift */; };
 		FF3935C5203E65B5004D5677 /* FoodGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */; };
 		FF3935CC203E6851004D5677 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935CB203E6851004D5677 /* FoodListView.swift */; };
+		FF3935CE203FABDC004D5677 /* FoodCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3935CD203FABDC004D5677 /* FoodCategories.swift */; };
 		FF6976061FBA6F38005BC897 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6976051FBA6F38005BC897 /* Restriction.swift */; };
 		FF69760B1FBC1F83005BC897 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */; };
 		FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BF2231FAE71CF0079882E /* FoodService.swift */; };
@@ -36,6 +37,7 @@
 		FF1F32541FA59DD200403A1A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Controllers/MapViewController.swift; sourceTree = "<group>"; };
 		FF3935C4203E65B5004D5677 /* FoodGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodGroupsViewController.swift; path = Controllers/FoodGroupsViewController.swift; sourceTree = "<group>"; };
 		FF3935CB203E6851004D5677 /* FoodListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListView.swift; path = Views/FoodListView.swift; sourceTree = "<group>"; };
+		FF3935CD203FABDC004D5677 /* FoodCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodCategories.swift; path = Views/FoodCategories.swift; sourceTree = "<group>"; };
 		FF6976051FBA6F38005BC897 /* Restriction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
 		FF69760A1FBC1F83005BC897 /* UIView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Utility.swift"; path = "Extensions/UIView+Utility.swift"; sourceTree = "<group>"; };
 		FF7BF2231FAE71CF0079882E /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodService.swift; path = Services/FoodService.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3935CB203E6851004D5677 /* FoodListView.swift */,
+				FF3935CD203FABDC004D5677 /* FoodCategories.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				TargetAttributes = {
 					FFEDD8281F89E2FD00114AE8 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = URE62YMM2S;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -327,7 +331,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MapWatch 2/Pods-MapWatch 2-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -378,6 +382,7 @@
 				FFCB79BE1F8EDDB1005FC32A /* HomeViewController.swift in Sources */,
 				FF7BF22B1FB198F20079882E /* ProfileViewController.swift in Sources */,
 				FFEDD82D1F89E2FD00114AE8 /* AppDelegate.swift in Sources */,
+				FF3935CE203FABDC004D5677 /* FoodCategories.swift in Sources */,
 				FF6976061FBA6F38005BC897 /* Restriction.swift in Sources */,
 				FF7BF2241FAE71CF0079882E /* FoodService.swift in Sources */,
 			);
@@ -484,7 +489,7 @@
 			baseConfigurationReference = 8FC6776795592FAD36BE8810 /* Pods-MapWatch 2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = URE62YMM2S;
 				INFOPLIST_FILE = "$(SRCROOT)/MapWatch 2/Supporting/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -500,7 +505,7 @@
 			baseConfigurationReference = 75D42FDC26FBEEA10693866C /* Pods-MapWatch 2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = URE62YMM2S;
 				INFOPLIST_FILE = "$(SRCROOT)/MapWatch 2/Supporting/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

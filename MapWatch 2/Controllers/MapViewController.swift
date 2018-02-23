@@ -9,10 +9,12 @@
 import UIKit
 import Firebase
 import GoogleMaps
-import MapKit
 
-class MapViewController: UIViewController {
-
+class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
+   
+    var locationManager = CLLocationManager()
+    lazy var mapView = GMSMapView()
+    
     let backButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 76, g: 200, b: 100)
@@ -36,13 +38,37 @@ class MapViewController: UIViewController {
        // view.backgroundColor = UIColor(r: 76, g: 217, b: 100)
         checkIfUserIsLoggedOn()
         
-        
-    }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-    }
+        // Create a GMSCameraPosition that tells the map to display the
+        // coordinate -33.86,151.20 at zoom level 13.
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 16.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.isMyLocationEnabled = true
+        mapView.setMinZoom(15.0, maxZoom: 18)
+        mapView.animate(toZoom: 15)
+//        mapView.animate(toViewingAngle: 45)
+        mapView.delegate = self
+        view = mapView
 
+        // User Location
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation = locations.last
+        let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
+        
+        let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
+                                              longitude: userLocation!.coordinate.longitude, zoom: 13.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.isMyLocationEnabled = true
+        self.view = mapView
+        
+        locationManager.stopUpdatingLocation()
+    }
+    
     func checkIfUserIsLoggedOn() {
         if Auth.auth().currentUser?.uid == nil {// detects if user is not logged in
             DispatchQueue.main.async(execute: {
@@ -62,6 +88,7 @@ class MapViewController: UIViewController {
             }, withCancel: nil)
         }
     }
+    
     func handleLogout() {
         do {
             try Auth.auth().signOut()
