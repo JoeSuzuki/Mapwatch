@@ -12,7 +12,8 @@ import Firebase
 class RestrictionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let cellId = "cellId"
-    
+    let restrictionService = FoodService()
+
     let tableView: UITableView = {
         let table = UITableView()
         table.separatorStyle = .none
@@ -20,6 +21,22 @@ class RestrictionsViewController: UIViewController, UITableViewDelegate, UITable
         return table
     }()
     
+    let addRestrictionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .blue //UIColor(r: 76, g: 200, b: 100)
+        button.setTitle("Add Restraint", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        //        button.setTitleColor(UIColor(r: 76, g: 200, b: 100), for: .normal)
+        button.tintColor = .white
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(addRestriction), for: .touchUpInside)
+        return button
+    }()
+    
+    func addRestriction() {
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -37,14 +54,15 @@ class RestrictionsViewController: UIViewController, UITableViewDelegate, UITable
         tableView.register(CellContent.self, forCellReuseIdentifier: cellId)
 
         view.addSubview(tableView)
-        
+        view.addSubview(addRestrictionButton)
+
 //        //x, y, width, height
 //        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
 //        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
 //        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
 //        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        tableView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
-
+        tableView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: addRestrictionButton.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        addRestrictionButton.setAnchor(top: tableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,7 +87,7 @@ class RestrictionsViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return ""
     }
-
+    
 
 }
 class CellContent: UITableViewCell {

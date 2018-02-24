@@ -38,14 +38,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
        // view.backgroundColor = UIColor(r: 76, g: 217, b: 100)
         checkIfUserIsLoggedOn()
         
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 13.
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 16.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.setMinZoom(15.0, maxZoom: 18)
         mapView.animate(toZoom: 15)
-//        mapView.animate(toViewingAngle: 45)
         mapView.delegate = self
         view = mapView
 

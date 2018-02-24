@@ -37,7 +37,7 @@ class HomeViewController: UIViewController{
         
         restrictionService.getDataFromFirebase(tableData) { (dataArray) -> () in
             self.tableData = dataArray
-            self.tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
+//            self.tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
             self.tableView.delegate = self
             self.tableView.dataSource = self
             self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -51,13 +51,8 @@ class HomeViewController: UIViewController{
         view.addSubview(tableView)
         view.addSubview(addRestrictionButton)
         
-        //        //x, y, width, height
-        //        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        //        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        //        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        //        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         tableView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: addRestrictionButton.topAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
-        addRestrictionButton.setAnchor(top: tableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        addRestrictionButton.setAnchor(top: tableView.bottomAnchor, left: tableView.leftAnchor, bottom: view.bottomAnchor, right: tableView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
     }
 
 }
