@@ -12,5 +12,5 @@ import FirebaseDatabase
 import UIKit
 
 struct UserService {
-    
+
 }

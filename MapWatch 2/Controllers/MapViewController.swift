@@ -69,7 +69,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     func checkIfUserIsLoggedOn() {
         if Auth.auth().currentUser?.uid == nil {// detects if user is not logged in
             DispatchQueue.main.async(execute: {
-                self.handleLogout()
+                UserService().handleLogout()
             })
         } else {
             let uid = Auth.auth().currentUser?.uid
